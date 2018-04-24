@@ -1,0 +1,74 @@
+.header{
+	height: 130px;
+	background-color: rgba(9, 138, 150,0.5);
+	padding: 20px 0px 0px 10px;
+	/*animation-iteration-count: infinite;
+	animation-fill-mode: forwards;*/
+}
+.title{
+	color: black;
+	font-size: 22px;
+	text-align: center;
+	padding: 40px auto;
+	font-weight: bolder;
+}
+.navbar{
+	color: white;
+	font-size: 30px;
+    background-color: rgb(19, 153, 141);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar a {
+    float: left;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+   /* padding: 5px 5px;*/
+    text-decoration: none;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: gray;
+}
+#logInText{
+	color: black;
+}
+
+.panel-heading{
+	border-radius: 3px;
+    background: #026058;
+}
+#noticeHead{
+    border: 0px solid #000;
+     /*background: #026058;*/
+     color: white;
+     font-size: 20px;
+    background-color: rgb(19, 153, 141); 
+}
+.news-item {
+    padding: 4px 4px;
+    margin: 0px;
+    border-bottom: 1px dotted #555;
+    display: list-item;
+}
+#about{
+	height: 285px;
+}
+
+#heading{
+	 border: 0px solid #000;
+     /*background: #026058;*/
+     color: white;
+     font-size: 20px;
+    background-color: rgb(19, 153, 141); 
+}
+#text1{
+	font-family: Arial;
+	font-size: 1em;
+	color: black;
+
+}
+#imageDiv{
+	background-color: gray;
+}
+

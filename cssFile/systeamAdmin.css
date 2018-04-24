@@ -1,0 +1,70 @@
+#left-column{
+	min-height: 700px;
+	background-color:  rgb(19, 153, 141);
+}
+#right-column{
+	min-height: 700px;
+	background-color: rgb(232,232,232);
+}
+.header{
+	font-size: 20px;
+	font-variant: bold;
+	background-color:rgb(19, 153, 141);
+	color: white;
+	height: 70px;
+	padding: 10px 0px 10px 5px;
+	position: relative;
+}
+.user{
+	height: 60px;
+	font-size: 16px;
+	border-bottom: 5px solid #555;
+	color: black;
+}
+ 
+
+#userIcon{
+	font-size: 40px;
+	border-radius: 50%;
+}
+.home{
+	height: 65px;
+	font-size: 25px;
+	padding-top: 15px;
+	font-weight: bold;
+	border-bottom: 5px solid #555;
+
+}
+.home a:link{
+	color: black;
+}
+.home a:hover{
+	color: white;
+}
+.home a:active{
+	color: green;
+}
+.home a:visited{
+	color: black;
+}
+
+.option{
+	height: 5px;
+	font-size: 18px;
+	padding-top: 15px;
+	font-weight: bold;
+	border-bottom: 5px solid #555;
+	
+}
+.option a:link{
+	color: black;
+}
+.option a:hover{
+	color: white;
+}
+.option a:active{
+	color: green;
+}
+.option a:visited{
+	color: black;
+}
