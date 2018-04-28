@@ -31,10 +31,10 @@
 				echo $_SESSION["u_id"];
 
 				if($_SESSION['user_type'] == 'admin')
-				header("Location: ../systemAdmin1.php? login = success");
+				header("Location: ../SystemAdmin/systemAdmin1.php? login = success");
 
 				else if($_SESSION['user_type'] == 'board_member'){
-					header("Location: ../BM.php? login = success");
+					header("Location: ../BoardMember/BM.php? login = success");
 				}
 				
 			}

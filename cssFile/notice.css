@@ -1,0 +1,39 @@
+#form{
+	background-color: rgba(9, 138, 150,0.7);
+	height: 300px;
+
+}
+#title{
+	/*padding-left: 90px;
+	padding-top: 20px;*/
+	color: red;
+}
+#selectFile{
+	margin: auto;
+	padding-left: 95px;
+	padding-top: 25px; 
+}
+label{
+	margin-left: 20px;
+}
+#doc{
+	width: 280px;
+	height: 40px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+#div1 {
+	margin-left: 20px;
+  	position: relative;
+  	overflow: hidden;
+  	width: 280px;
+  	height: 40px;
+}
+#input1 {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}

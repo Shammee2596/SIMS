@@ -21,7 +21,7 @@
 				<div class="form">
 					<div class="col-lg-1"></div>
 					<div class="col-lg-10">
-					<form action="Authentication/storeInformation.php" method="POST">
+					<form action="storeInformation.php" method="POST">
 
 					  <div class="form-group">
 					    <label for="regNo">Registration No.*</label>

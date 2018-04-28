@@ -1,17 +1,13 @@
 <?php
-	include_once 'Authentication/dbh.db.php';
+	include_once '../Authentication/dbh.db.php';
 
 	$sql = "SELECT * FROM studentfullinformation";
 	$result = mysqli_query($conn, $sql);
-	$resultCheck = mysqli_num_rows($result);
-
-	
+	$resultCheck = mysqli_num_rows($result);	
 ?>
 <?php
-	include 'sysemHead.php';
+	include 'adminHeader.php';
 ?>
-
-	<div class="col-lg-10" id="right-column" style="background-color: white">
 		<div class="col-lg-12"> 
 			<div class="col-lg-12"><h2> Student Information </h2></div>
 				<table class="table table-striped">
@@ -49,8 +45,7 @@
 				</table>
 			</div>					
 		</div>
-	</div>
-</div>
-</body>
+<?php
+	include 'adminFooter.php';
+?>
 
-</html>

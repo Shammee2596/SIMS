@@ -1,5 +1,5 @@
 <?php
-	include_once '../Authentication/database/dbh.db.php';
+	include_once '../Authentication/dbh.db.php';
 
 	$name  = mysqli_real_escape_string($conn,$_POST['name']) ;
 	$dept  = mysqli_real_escape_string ($conn,$_POST['dept']);

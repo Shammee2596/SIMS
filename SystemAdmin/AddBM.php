@@ -1,7 +1,7 @@
 <?php
-	include'sysemHead.php';
+	include'adminHeader.php';
 ?>
-				<div class="col-lg-10" id="right-column">
+				
 						<div class="col-lg-2"></div>
 							<div class="col-lg-6">
 								<div class="col-lg-12" id="head"></div>
@@ -74,7 +74,6 @@
 								<div class="col-lg-4"></div>
 							</div>
 						</div>
-				</div>
-			</div>
-	</body>
-</html>
+<?php
+	include'adminFooter.php';
+?>

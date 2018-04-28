@@ -1,5 +1,5 @@
 <?php
-	include_once 'dbh.db.php';
+	include_once '../Authentication/dbh.db.php';
 
 	$name  = mysqli_real_escape_string($conn,$_POST['name']) ;
 	$regNo = mysqli_real_escape_string($conn, $_POST['regNo']);
@@ -31,16 +31,6 @@
 	$sql1 ="SELECT * FROM studentfullinformation WHERE regNo = '$regNo';";
 	$result = mysqli_query($conn, $sql);
 	//print_r($result);
-	//$row = mysqli_fetch_array($result);
-	//print_r($row);
-	//$resultCheck = mysqli_num_rows($result);
-
-/*	foreach($row as $one_row){
-		print_r ($one_row);
-		//print_r($one_row);
-
-	}*/
-	//.$id."<br>".$name."  ".$session;
 ?>
 
 
