@@ -17,7 +17,7 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius:5px;
-    box-shadow: 1px 1px ;
+    /*box-shadow: 1px 1px ;*/
 }
 
 button {
@@ -29,7 +29,7 @@ button {
     cursor: pointer;
     width: 300px;
     border-radius: 5px;
-    box-shadow: 1px 1px;
+    /*box-shadow: 1px 1px;*/
     font-size: 18px;
 }
 

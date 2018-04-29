@@ -8,6 +8,7 @@
 <?php
 	include 'adminHeader.php';
 ?>
+
 		<div class="col-lg-12"> 
 			<div class="col-lg-12"><h2> Student Information </h2></div>
 				<table class="table table-striped">
@@ -22,8 +23,10 @@
 							<th>Permanent Address</th>
 							<th>Blood Group</th>
 							<th>Status</th>
+							<th colspan="2">Action</th>
 						</tr>								
 					</thead>
+			
 
 					<?php
 						while ($row=mysqli_fetch_assoc($result)) {
@@ -38,6 +41,12 @@
 									echo "<td>".$row['permanentAddress']."</td>";
 									echo "<td>".$row['bloodGroup']."</td>";
 									echo "<td>".$row['status']."</td>";
+									echo "<td>
+										<a href='EditStudentDetail.php?edit=".$row['id']." ' class='edit_btn'>Edit</a>
+									</td>";
+									echo "<td>
+										<a href='EditStudentDetail.php?delete=".$row['id']." ' class='del_btn'>Delete</a>
+									</td>";
 								echo "</tr>";
 							echo "</tbody>";
 						}

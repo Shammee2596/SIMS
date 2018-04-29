@@ -1,3 +1,18 @@
+<?php
+ 	include_once '../Authentication/dbh.db.php';
+	if (isset($_POST['id'])) {
+		$id = $_POST['regNo'];
+		$update = true;
+		$record = mysqli_query($conn, "SELECT * FROM studentfullinformation WHERE regNo = $id");
+
+		if (count($record) == 1 ) {
+			$n = mysqli_fetch_array($record);
+			$name = $n['name'];
+			$address = $n['regNo'];
+			print_r($record);
+		}
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +37,7 @@
 					<div class="col-lg-1"></div>
 					<div class="col-lg-10">
 					<form action="storeInformation.php" method="POST">
-
+					  <input type="hidden" name="id" value="<?php echo $id; ?>">
 					  <div class="form-group">
 					    <label for="regNo">Registration No.*</label>
 					    <input type="text" class="form-control" name="regNo">
@@ -106,7 +121,7 @@
 					 <div>
 					 	<div class="col-lg-2"></div>
 					 	<div class="col-lg-6">
-					 	   <button type="submit" class="btn btn-default" id="submit">Submit</button>
+					 	   <button type="submit" class="btn btn-default" id="submit" name="submit">Submit</button>
 					 	</div>
 					 </div>   
 					<div class="col-lg-1"></div>
