@@ -1,18 +1,3 @@
-<?php
- 	include_once '../Authentication/dbh.db.php';
-	if (isset($_POST['id'])) {
-		$id = $_POST['regNo'];
-		$update = true;
-		$record = mysqli_query($conn, "SELECT * FROM studentfullinformation WHERE regNo = $id");
-
-		if (count($record) == 1 ) {
-			$n = mysqli_fetch_array($record);
-			$name = $n['name'];
-			$address = $n['regNo'];
-			print_r($record);
-		}
-	}
-?>
 <!DOCTYPE html>
 <html>
 <head>

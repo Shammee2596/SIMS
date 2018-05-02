@@ -2,7 +2,7 @@
   			session_start();
   			if(!isset($_SESSION["u_id"])) {
   				//echo "not ok";
-  				header("Location: index.php? login=waaa");
+  				header("Location: ../index.php? login=waaa");
   			} 
 ?>
 
@@ -87,7 +87,7 @@
 							<a href="#">Edit Student Information</a>
 						</div>
 						<div class="menu1">
-							<a href="#"> Edit Own Profile</a>
+							<a href="BMInfo.php"> Edit Own Profile</a>
 						</div>
 					</div>
 				</div>

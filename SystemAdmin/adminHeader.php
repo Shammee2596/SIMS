@@ -2,7 +2,7 @@
   			session_start();
   			if(!isset($_SESSION["u_id"])) {
   				//echo "not ok";
-  				header("Location: index.php? login=Vaaa");
+  				header("Location: ../index.php? login=login denied as system admin");
   			} 
 ?>
 
@@ -79,13 +79,13 @@
 							<a href="addBM.php"> Add New Board Member</a>
 						</div>
 						<div class="menu1">
-							<a href="display.php">View Student Details</a>
+							<a href="display.php">Student Details</a>
 						</div>
-						<div class="menu1">
+						<!-- <div class="menu1">
 							<a href="#">Edit Student Information</a>
-						</div>
+						</div> -->
 						<div class="menu1">
-							<a href="#"> Edit Own Profile</a>
+							<a href="editPersonalInfoSA.php">System Admin Profile</a>
 						</div>
 					</div>
 				</div>

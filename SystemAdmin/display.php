@@ -45,7 +45,7 @@
 										<a href='EditStudentDetail.php?edit=".$row['id']." ' class='edit_btn'>Edit</a>
 									</td>";
 									echo "<td>
-										<a href='EditStudentDetail.php?delete=".$row['id']." ' class='del_btn'>Delete</a>
+										<a href='DeleteStudent.php?delete=".$row['id']." ' class='del_btn'>Delete</a>
 									</td>";
 								echo "</tr>";
 							echo "</tbody>";

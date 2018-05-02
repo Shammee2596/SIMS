@@ -1,8 +1,7 @@
 <?php
 	session_start();
 	include_once '../Authentication/dbh.db.php';
-	$update = false;
-	$id = 0;
+
 
 	if(isset($_POST['submit'])){
 		$name  = mysqli_real_escape_string($conn,$_POST['name']) ;

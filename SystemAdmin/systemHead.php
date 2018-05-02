@@ -2,7 +2,7 @@
   			session_start();
   			if(!isset($_SESSION["u_id"])) {
   				//echo "not ok";
-  				header("Location: index.php? login=waaa");
+  				header("Location: ../index.php? login=waaa");
   			} 
 ?>
 
