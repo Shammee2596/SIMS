@@ -1,7 +1,14 @@
+<?php
+	include_once'Authentication/dbh.db.php';
+	$sql = "SELECT * FROM notice";
+	$result = mysqli_query($conn, $sql);
+	$resultCheck = mysqli_num_rows($result);
+
+?>
 <!DOCTYPE html>
-<html>
-	<head lang="en">
-		<title></title>
+<html lang="en">
+	<head>
+		<title>Student Information Management System</title>
 	  	<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -110,16 +117,18 @@
 						            <div class="row">
 						                <div class="col-xs-12">
 						                    <ul class="demo1">
+						                    	<?php while ($row=mysqli_fetch_assoc($result)) {?>
 						                        <li class="news-item">
 						                            <table cellpadding="4">
 						                                <tr>
 						                                    <td>
-						                                        <h4 class='list-group-item-heading'>রাষ্ট্রবিজ্ঞান বিভাগরে অধীনে মাস্টার ইন গভার্নেন্স স্টাডিজ (এমজিএস) ৯ম ব্যাচ ১ম সেমিস্টার ভর্তি বিজ্ঞপ্তি</h4>        <a href="#">Read more...</a>
+						                                        <h4 class='list-group-item-heading'><?php echo $row['name'];?></h4>        <a href="notice/<?php echo $row['filePath'] ?>" target="_blank">Read more...</a>
 						                                    </td>
 						                                </tr>
 						                            </table>
 						                    	</li>
-						                        <li class="news-item">
+						                    	<?php } ?>
+						                       <!--  <li class="news-item">
 						                            <table cellpadding="4">
 						                                <tr>
 						                                    <td>
@@ -128,8 +137,8 @@
 						                                    </td>
 						                                </tr>
 						                            </table>
-						                    	</li>
-						                        <li class="news-item">
+						                    	</li> -->
+						                     <!--    <li class="news-item">
 						                            <table cellpadding="4">
 						                                <tr>
 						                                    <td>
@@ -148,7 +157,7 @@
 						                                    </td>
 						                                </tr>
 						                            </table>
-						                    	</li>
+						                    	</li> -->
 						                    </ul>
 						                </div>
 						            </div>

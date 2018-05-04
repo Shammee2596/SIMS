@@ -34,7 +34,7 @@
 		   				<div class="col-lg-2">
  							<div class="option">
 								<div class="col-lg-1">
-									<a href="homePage.html">
+									<a href="../index.php">
    							 			<span class="glyphicon glyphicon-home" >Home</span>
    							 		</a> 
 								</div>

@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!--  <link rel="stylesheet" type="text/css" href="admin.css"> -->
+  <link rel="stylesheet" type="text/css" href="Student/student.css">
 </head>
+
 <body>
   <nav class="navbar navbar-light" style="background-color: #26A69A;">
     <div class="container-fluid">
@@ -27,36 +30,68 @@
 
       <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Home</a></li> -->
-        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-        <li><a href="#"><p id="sims"><i>SIMS</i></p></a></li>
-        <li><a href="#">Page 2</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Add
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">New Student</a></li>
-            <li><a href="#">New Board Member</a></li>
-          </ul>
-        </li>
       </ul>
-      <form class="navbar-form navbar-left" action="/action_page.php">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search" name="search">
-          <div class="input-group-btn">
-            <button class="btn btn-default" type="submit">
-              <i class="glyphicon glyphicon-search"></i>
-            </button>
-          </div>
-        </div>
-      </form>
     </div>
   </nav>
-
 <div class="container">
-  <h3>Navbar Forms</h3>
-  <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p>
-  <p>The .input-group class is a container to enhance an input by adding an icon, text or a button in front or behind it as a "help text".</p>
-  <p>The .input-group-btn class attaches a button next to an input field. This is often used as a search bar:</p>
+ <div class="row">
+        <div class="col-lg-12" id="header"></div>
+        <p id="title">Personal Info</p>
+        <div class="col-lg-3"></div>
+        <div  class="col-lg-6">
+          <div class="card">
+            <div class="imgcontainer" id ="image">
+                      <img src="/icon/av.png" alt="Avatar" class="avatar">
+                  </div>
+                  <div class="container">
+              <table>
+                <tr>
+                  <td>Registration No.</td>
+                  <td>:</td>
+                  <td>2015718015</td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>:</td>
+                  <td>Sumaya Akther Shammy</td>
+                </tr>
+                <tr>
+                  <td>Session</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Department</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Subject</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Class Roll</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Status</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Present Address</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Permanent Address:</td>
+                  <td>:</td>
+                </tr>
+                <tr>
+                  <td>Local Guardian Contact No</td>
+                  <td>:</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>    
 </div>
  <script>
   function openNav() {
