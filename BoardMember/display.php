@@ -24,6 +24,7 @@
 							<th>Permanent Address</th>
 							<th>Blood Group</th>
 							<th>Status</th>
+							<th>Action </th>
 						</tr>								
 					</thead>
 
@@ -40,6 +41,12 @@
 									echo "<td>".$row['permanentAddress']."</td>";
 									echo "<td>".$row['bloodGroup']."</td>";
 									echo "<td>".$row['status']."</td>";
+									echo "<td>
+										<a href='../SystemAdmin/EditStudentDetail.php?edit=".$row['id']." ' class='edit_btn'>Edit</a>
+									</td>";
+									echo "<td>
+										<a href='DeleteStudent.php?delete=".$row['id']." ' class='del_btn'>Delete</a>
+									</td>";
 								echo "</tr>";
 							echo "</tbody>";
 						}

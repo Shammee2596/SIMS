@@ -39,7 +39,7 @@
 				
 			}
 			else{
-				header("Location: ../login.php? login=Maaaaaa");
+				header("Location:login1.php? login=Maaaaaa");
 				exit();
 
 			}

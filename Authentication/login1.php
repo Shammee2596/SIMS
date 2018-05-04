@@ -14,7 +14,7 @@
         <div class="col-lg-4"></div>
         <div class="col-lg-4" id="form">
           <h2 style="text-align: center;">Login Form</h2>
-          <form action="signin.php" method="POST">
+          <form action="signin.php" method="POST" id="cancel">
             <div class="imgcontainer">
               <img src="../icon/av.png" alt="Avatar" class="avatar">
             </div>
@@ -27,13 +27,13 @@
               <input type="password" placeholder="Enter Password" name="password" required><br>
                   
               <button type="submit" name="login">Login</button><br>
-              <label>
+              <!-- <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label>
+              </label> -->
             </div>
 
             <div class="container" style="background-color:#f1f1f1 width:300px;">
-              <button type="button" class="cancelbtn">Cancel</button>
+              <button type="button" class="cancelbtn" onclick="myFunction()">Cancel</button>
               <span class="psw">Forgot <a href="forgetPassword.php" style="color: red">password?</a></span>
             </div>
           </form>
@@ -41,7 +41,12 @@
         <div class="col-lg-4"></div>
       </div>
     </div>
-
+    
+<script type="text/javascript">
+  function myFunction() {
+    document.getElementById("cancel").reset();
+}
+</script>
 
 
 

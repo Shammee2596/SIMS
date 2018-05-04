@@ -42,7 +42,7 @@
 									echo "<td>".$row['bloodGroup']."</td>";
 									echo "<td>".$row['status']."</td>";
 									echo "<td>
-										<a href='EditStudentDetail.php?edit=".$row['id']." ' class='edit_btn'>Edit</a>
+										<a href='editStudentDetails.php?edit=".$row['id']." ' class='edit_btn'>Edit</a>
 									</td>";
 									echo "<td>
 										<a href='DeleteStudent.php?delete=".$row['id']." ' class='del_btn'>Delete</a>

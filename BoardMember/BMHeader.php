@@ -83,11 +83,11 @@
 						<div class="menu1">
 							<a href="display.php">View Student Details</a>
 						</div>
-						<div class="menu1">
+						<!-- <div class="menu1">
 							<a href="#">Edit Student Information</a>
-						</div>
+						</div> -->
 						<div class="menu1">
-							<a href="BMInfo.php"> Edit Own Profile</a>
+							<a href="BMInfo.php"> Board Member Profile</a>
 						</div>
 					</div>
 				</div>
