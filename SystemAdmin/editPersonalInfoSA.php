@@ -1,4 +1,11 @@
 <?php
+  			session_start();
+  			if(!isset($_SESSION["u_id"])) {
+  				//echo "not ok";
+  				header("Location: ../index.php? login=waaa");
+  			} 
+?>
+<?php
 	include_once '../Authentication/dbh.db.php';
 
 	$sql = "SELECT * FROM user WHERE user_type = 'admin'";
@@ -24,13 +31,11 @@
 				<div class="col-lg-12" style="height: 150px;"></div>
 				<div class="col-lg-12" id="form">
 					<h2 style="text-align: center;">System Admin Information</h2>
-					<?php
-						while ($row=mysqli_fetch_assoc($result)) {
-							echo "UserName:".$row['username']."<br>";
-							/*echo "Password:".$row['password']."<br>";*/
+					<?php while ($row=mysqli_fetch_assoc($result)) { ?>
+							<p class="info"> UserName: <?php echo $row['username'];?></p>
+							<p class="info"><a href="../Authentication/changePassword.php" style="color: white">Change Password</a></p>
 								
-						}
-					?>
+					<?php } ?>
 
 		          	<!-- <form action="accountRecovery.php" method="POST">
 			            <div class="container">

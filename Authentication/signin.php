@@ -27,14 +27,18 @@
 				$_SESSION['is_logged_in'] = true;
 				$_SESSION["u_id"] = $db_uname;
 				$_SESSION['user_type'] = $db_type;
+				//$_SESSION['password'] = $db_password;
 
 				echo $_SESSION["u_id"];
 
-				if($_SESSION['user_type'] == 'admin')
+				if($_SESSION['user_type'] == 'admin'){
 				header("Location: ../SystemAdmin/systemAdmin1.php? login = success");
-
+				}
 				else if($_SESSION['user_type'] == 'board_member'){
 					header("Location: ../BoardMember/BM.php? login = success");
+				}
+				else if($_SESSION['user_type'] == 'student'){
+					header("Location: ../Student/student.php? login = success");
 				}
 				
 			}

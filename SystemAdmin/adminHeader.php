@@ -70,7 +70,7 @@
 					<div class="container">
 						<div>
 							<img src="../icon/av.png" alt="Avatar" id="image">
-							<div id="imageTxt"> Welcome</div>	
+							<div id="imageTxt"> Welcome <?php echo $_SESSION["u_id"];?></div>	
 						</div>
 						<div class="menu1">
 							<a href="AddStudent.php">Add New Student</a>

@@ -21,19 +21,24 @@
 	if ($resultCheck>0) {
 		//header("Location: storeInformation.html? Information already exists");
 		//exit();
-		echo "<br>";
-	}
-	if ($resultCheck1>0) {
+		if ($resultCheck1>0) {
 		echo "sorry";
+		}
+		echo "Duplicate Information";
 	}
-	else{
 
-		$sql = "INSERT INTO board_member_information(email, name, designation, department, hall_designation)
-		VALUES( '$email','$name', '$designation', '$dept', '$hallDesignation')";
-		mysqli_query($conn,$sql);
+	else{
 		$hashPwd = password_hash($password, PASSWORD_DEFAULT);
-		
 		$sql1 = "INSERT INTO user(username, password, user_type) VALUES ('$userName','$hashPwd','$userType')";
 		mysqli_query($conn,$sql1);
+		$sql = "INSERT INTO board_member_information(email, name, designation, department, hall_designation,username)
+		VALUES( '$email','$name', '$designation', '$dept', '$hallDesignation',(SELECT username FROM user WHERE username = '$userName'))";
+		$query = mysqli_query($conn,$sql);
+		if(!$query){
+			$sql = "DELETE FROM user WHERE username='$userName';";
+			mysqli_query($conn,$sql);
+		}
+		
+
 	}
 ?>

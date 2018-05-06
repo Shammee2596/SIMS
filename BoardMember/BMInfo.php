@@ -1,7 +1,14 @@
 <?php
+  			session_start();
+  			if(!isset($_SESSION["u_id"])) {
+  				//echo "not ok";
+  				header("Location: ../index.php? login=waaa");
+  			} 
+?>
+<?php
 	include_once '../Authentication/dbh.db.php';
-
-	$sql = "SELECT * FROM board_member_information";
+	$username = $_SESSION['u_id'];
+	$sql = "SELECT * FROM board_member_information WHERE username = '$username';";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);	
 ?>
