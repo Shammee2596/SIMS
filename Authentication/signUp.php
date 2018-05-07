@@ -43,6 +43,7 @@
 						<option value="Chemistry">Chemistry</option>
 						<option value="Zoology">Zoology</option>
 						<option value="Botany">Botany</option>
+						<option value="International Business">International Business</option>
 						<option value="Microbiology And Moleculer Biology">Microbiology And Moleculer Biology</option>
 					</select><br>
 

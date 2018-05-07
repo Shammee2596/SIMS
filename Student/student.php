@@ -36,7 +36,7 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="#"></a>
           <a href="index.php"> <span class="glyphicon glyphicon-home" style="font-size: 24px">Home</span></a>
-          <a>Compalint</a>
+          <a href="complaintForm.php">Compalint</a>
         </div>
         <div id="main">
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>

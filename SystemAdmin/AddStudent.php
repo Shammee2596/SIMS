@@ -20,7 +20,7 @@
 
 				<div class="form">
 					<div class="col-lg-1"></div>
-					<div class="col-lg-10">
+					<div class="col-lg-10 col-lg-offset-2" >
 					<form action="storeInformation.php" method="POST">
 					  <input type="hidden" name="id" value="<?php echo $id; ?>">
 					  <div class="form-group">
@@ -48,6 +48,7 @@
 					        <option value="Chemistry">Chemistry</option>
 					        <option value="Zoology">Zoology</option>
 					        <option value="Botany">Botany</option>
+					        <option value="International Business">International Business</option>
 					        <option value="Microbiology And Moleculer Biology">Microbiology And Moleculer Biology</option>
 					      </select>
 						</div>
