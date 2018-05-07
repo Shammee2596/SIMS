@@ -1,3 +1,18 @@
+<?php
+  			session_start();
+  			if(!isset($_SESSION["u_id"])) {
+  				//echo "not ok";
+  				header("Location: ../index.php? login=waaa");
+  			} 
+?>
+
+<?php
+	include_once '../Authentication/dbh.db.php';
+	$username = $_SESSION['u_id'];
+	$sql = "SELECT * FROM studentfullinformation WHERE username = '$username';";
+	$result = mysqli_query($conn, $sql);
+	$resultCheck = mysqli_num_rows($result);
+?>
 <!DOCTYPE html>
 <html  lang="en">
 	<head>
@@ -19,10 +34,9 @@
       <div class="navbar-header">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#"></a>
           <a href="index.php"> <span class="glyphicon glyphicon-home" style="font-size: 24px">Home</span></a>
           <a>Compalint</a>
-          <a>Add Board Member</a>
-          <a>View Student Details</a>
         </div>
         <div id="main">
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -45,52 +59,63 @@
 		            	</div>
 		            	<div class="container">
 							<table>
+								<?php while ($row=mysqli_fetch_assoc($result)){?>
 								<tr>
 									<td>Registration No.</td>
 									<td>:</td>
-									<td>2015718015</td>
+									<td>&nbsp;<?php echo $row['regNo'];?></td>
 								</tr>
 								<tr>
 									<td>Name</td>
 									<td>:</td>
-									<td>Sumaya Akther Shammy</td>
+									<td>&nbsp;<?php echo $row['name'];?></td>
 								</tr>
 								<tr>
 									<td>Session</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['session'];?></td>
 								</tr>
 								<tr>
 									<td>Department</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['dept'];?></td>
 								</tr>
 								<tr>
 									<td>Subject</td>
 									<td>:</td>
+									<td>&nbsp;</td>
 								</tr>
 								<tr>
 									<td>Class Roll</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['classRoll'];?></td>
 								</tr>
 								<tr>
 									<td>Status</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['status'];?></td>
 								</tr>
 								<tr>
 									<td>Present Address</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['presentAddress'];?></td>
 								</tr>
 								<tr>
 									<td>Permanent Address:</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['permanentAddress'];?></td>
 								</tr>
 								<tr>
 									<td>Local Guardian Contact No</td>
 									<td>:</td>
+									<td>&nbsp;<?php echo $row['l_contactNumber'];?></td>
 								</tr>
+								<?php }?>
 							</table>
 						</div>
 					</div>
 				</div>
+				<div class="col-lg-3"></div>
 			</div>		
 		</div>
 		<script>

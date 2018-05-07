@@ -29,7 +29,7 @@
 
 	else{
 		$hashPwd = password_hash($password, PASSWORD_DEFAULT);
-		$sql1 = "INSERT INTO user(username, password, user_type) VALUES ('$userName','$hashPwd','$userType')";
+		$sql1 = "INSERT INTO user(username, password,email,user_type) VALUES ('$userName','$hashPwd','$email','$userType')";
 		mysqli_query($conn,$sql1);
 		$sql = "INSERT INTO board_member_information(email, name, designation, department, hall_designation,username)
 		VALUES( '$email','$name', '$designation', '$dept', '$hallDesignation',(SELECT username FROM user WHERE username = '$userName'))";

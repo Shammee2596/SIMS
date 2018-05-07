@@ -11,21 +11,28 @@ if (isset($_POST['CreateAccount'])) {
 	$email = mysqli_real_escape_string ($conn,$_POST['email']);
 	$uid   = mysqli_real_escape_string ($conn,$_POST['username']);
 	$pwd   = mysqli_real_escape_string ($conn,$_POST['password']);
+	$user_type = "student";
 				
 
-	$sql = "SELECT * FROM student WHERE regNo = '$regNo';";
+	$sql = "SELECT * FROM studentfullinformation WHERE regNo = '$regNo';";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
 
-	if ($resultCheck>0) {
+	if ($resultCheck<0) {
 		header("Location: ../index.php? signup=empty");
 		exit();
 	}
-	else{
+	else if($resultCheck == 1){
 		$hashPwd = password_hash($pwd, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO student(name,regNo, department,email,userId,password) 
-		VALUES ('$name','$regNo', '$dept', '$email', '$uid', '$hashPwd')";
-		mysqli_query($conn,$sql);
+		$sql = "INSERT INTO user(username,password,email,user_type) 
+		VALUES ('$uid', '$hashPwd','$email','$user_type' )";
+		$query = mysqli_query($conn,$sql);
+		if($query){
+			$sql = "UPDATE studentfullinformation
+					SET username = '$uid'
+					WHERE regNo = '$regNo';";
+			mysqli_query($conn,$sql);
+		}
 		header("Location: ../index.php? signup=success");
 		exit();
 	}

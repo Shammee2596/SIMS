@@ -46,11 +46,12 @@ body{
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ /* background-color: white;*/
  /* text-align: center;*/
   font-family: arial;
 }
 td{
-	font-size: 20px;
+	font-size: 16px;
 	color: white;
 	padding-bottom: 10px;
 }
