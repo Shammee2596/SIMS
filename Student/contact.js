@@ -6,7 +6,7 @@ $(function () {
 
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
-            var url = "contact-3.php";
+            var url = "complaint.php";
 
             // POST values in the background the the script URL
             $.ajax({

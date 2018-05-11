@@ -30,24 +30,31 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-light" style="background-color: rgba(9, 138, 150,0.7);">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#"></a>
-          <a href="index.php"> <span class="glyphicon glyphicon-home" style="font-size: 24px">Home</span></a>
-          <a href="complaintForm.php">Compalint</a>
-        </div>
-        <div id="main">
-          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        </div>
-      </div>
+		    <div class="container-fluid">
+		      <div class="navbar-header">
+		        <div id="mySidenav" class="sidenav">
+		          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		          <a href="#"></a>
+		          <a href="../index.php"> <span class="glyphicon glyphicon-home" style="font-size: 24px">Home</span></a>
+		          <a href="ComplaintForm1.php">Compalint</a>
+		          <a href="editProfile.php">Edit Profile</a>
+		        </div>
+		        <div id="main">
+		          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		        </div>
+		      </div>
 
-      <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Home</a></li> -->
-      </ul>
-    </div>
-  </nav>
+		      <ul class="nav navbar-nav" style="float: right">
+		        	<form class="form-inline" action= "../Authentication/logoutTest.php" method="POST">
+						<div class="form-group" id="logout">
+							<button type="submit" class="btn btn-default" name="logout">
+	          					<span class="glyphicon glyphicon-log-out"></span> Logout 
+        					</button>
+						</div>
+					</form>
+		      </ul>
+		    </div>
+		 </nav>
 		<div class="container-fluid">
 			<div class="row">
 				<p id="title">Personal Info</p>
@@ -110,7 +117,7 @@
 									<td>:</td>
 									<td>&nbsp;<?php echo $row['l_contactNumber'];?></td>
 								</tr>
-								<?php }?>
+								<?php } mysqli_close($conn);?>
 							</table>
 						</div>
 					</div>

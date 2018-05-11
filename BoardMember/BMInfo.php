@@ -26,21 +26,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4"></div>
-			<div class="col-lg-4">
+			<div class="col-lg-5">
 				<div class="col-lg-12" style="height: 150px;"></div>
 				<div class="col-lg-12" id="form">
-					<h2 style="text-align: center;">System Admin Information</h2>
+					<h2 style="text-align: center;">Board Member Profile</h2>
 					<?php
-						while ($row=mysqli_fetch_assoc($result)) {
-							echo "Name:".$row['name']."<br>";
-							echo "Email:".$row['email']."<br>";
-							echo "Designation:".$row['designation']."<br>";
-							echo "Department:".$row['department']."<br>";
-							echo "Hall Designation:".$row['hall_designation']."<br>";
-							/*echo "Password:".$row['password']."<br>";*/
-								
-						}
-					?>
+						while ($row=mysqli_fetch_assoc($result)) {?>
+							<p class="info"> Name:  <?php echo $row['name'];?></p>
+							<p class="info"> Designation:  <?php echo $row['designation'];?></p>
+							<p class="info"> Department:  <?php echo $row['department'];?></p>
+							<p class="info"> Hall_Post:  <?php echo $row['hall_designation'];?></p>
+							<p class="info"><a href="../Authentication/changePassword.php" style="color: black">Change Password</a></p>
+							
+					<?php }?>
 
 		          	<!-- <form action="accountRecovery.php" method="POST">
 			            <div class="container">

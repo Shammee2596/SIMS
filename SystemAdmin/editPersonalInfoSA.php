@@ -13,6 +13,7 @@
 	$resultCheck = mysqli_num_rows($result);	
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,27 +31,16 @@
 			<div class="col-lg-4">
 				<div class="col-lg-12" style="height: 150px;"></div>
 				<div class="col-lg-12" id="form">
-					<h2 style="text-align: center;">System Admin Information</h2>
+					<h2 style="text-align: center; color: white;">System Admin Information</h2>
 					<?php while ($row=mysqli_fetch_assoc($result)) { ?>
 							<p class="info"> UserName: <?php echo $row['username'];?></p>
-							<p class="info"><a href="../Authentication/changePassword.php" style="color: white">Change Password</a></p>
+							<p class="info"><a href="../Authentication/changePassword.php" style="color: black">Change Password</a></p>
 								
-					<?php } ?>
-
-		          	<!-- <form action="accountRecovery.php" method="POST">
-			            <div class="container">
-			              <label for="email"><b>Username</b></label><br>
-			              <input type="text" placeholder="Enter email" name="email" required><br>
-			              <label>Change Password</label><br>
-			              <input type="password" name="password"><br>
-			              <input type="password" name="conpwd"><br>
-		    	          <button type="submit" name="submit" class="btn btn-success">Submit</button><br>
- 						</div>
- 					</form>		 -->			
+					<?php } ?>		
 				</div>
-
+			</div>
 		</div>
-	</div>
+	</div>	
 
 </body>
 </html>

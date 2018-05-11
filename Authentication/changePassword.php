@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Change password in php</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="jquery-1.11.1.js"></script>
-<link rel="stylesheet" type="text/css" href="../cssFile/changePassword.css">
+    <meta charset="utf-8">
+    <title>Change password</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="http://www.du.ac.bd/assets/css/animate.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="../cssFile/changePassword.css">
 </head>
 <body>
  
@@ -34,48 +39,43 @@ if(!empty($_SESSION['form_data']))
 }
  
 ?>
- 
-    <h1><center>Change Password Form</center></h1>
-    <form action="change-Password.php" method="post" onsubmit="return validate();" id="form_submission_ajax">
-        <table class="form-table">
-             
-            <tr>
-                <td><label>Old password:</label></td>
-                <td><input type="password" name="old_password" id="old_password" value="<?php echo $form_data['old_password']; ?>"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td id="old_password_error" class="error"><?php echo $error['old_password_error']; ?></td>
-            </tr>
- 
-            <tr>
-                <td><label>New Password:</label></td>
-                <td><input type="password" name="new_password" id="new_password" value="<?php echo $form_data['new_password']; ?>"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td id="new_password_error" class="error"><?php echo $error['new_password_error']; ?></td>
-            </tr>
- 
-            <tr>
-                <td><label>Confirm Password:</label></td>
-                <td><input type="password" name="confirm_password" id="confirm_password" value="<?php echo $form_data['confirm_password']; ?>"></td>
-            </tr>
- 
-            <tr>
-                <td></td>
-                <td id="confirm_password_error" class="error"><?php echo $error['confirm_password_error']; ?></td>
-            </tr>
- 
-            <tr>
-                <td></td>
-                <td>
+ <div class="container">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4" id="form">
+        <h1 style="color: white;"><center>Change Password</center></h1>
+        <form action="change-Password.php" method="post" onsubmit="return validate();" id="form_submission_ajax">
+            <div class="form-controls">
+                <div>
+                    <label>Current password:</label><br>
+                    <input type="password" name="old_password" id="old_password" placeholder="Enter Current Password" value="<?php echo $form_data['old_password']; ?>">
+                </div>
+                <div>
+                     <p id="old_password_error" class="error"><?php echo $error['old_password_error']; ?></p>
+                 </div>
+                 <div>
+                     <label>New Password:</label><br>
+                     <input type="password" name="new_password" id="new_password" placeholder="Enter New Password" value="<?php echo $form_data['new_password']; ?>">
+                 </div>
+                 <div>
+                     <p id="new_password_error" class="error"><?php echo $error['new_password_error']; ?></p>
+                 </div>
+                 <div>
+                     <label>Confirm Password:</label><br>
+                     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm New Password" value="<?php echo $form_data['confirm_password']; ?>">
+                 </div>
+                 <div>
+                     <p id="confirm_password_error" class="error"><?php echo $error['confirm_password_error']; ?></p>
+                 </div>
+                 <div>
                     <input type="hidden" name="user_id" id="user_id" value="1">
                     <input type="submit" name="submit" value="Submit">
-                </td>
-            </tr>
-        </table>
-    </form>
+                 </div>
+            </div> 
+        </form>
+    </div>
+         
+ </div>
+
 </body>
  
 <script type="text/javascript">

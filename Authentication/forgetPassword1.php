@@ -16,7 +16,7 @@
 				<div class="col-lg-12" style="height: 200px;"></div>
 				<div class="col-lg-12" id="form">
 					<h2 style="text-align: center;">Account Recovery</h2>
-		          	<form action="accountRecovery.php" method="POST">
+		          	<form action="userRecovery1.php" method="POST">
 			            <div class="container">
 			              <label for="code"><b>Enter The Security Code</b></label><br>
 			              <input type="text" placeholder="Enter security code" name="code" required><br>

@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<h2 style="text-align: center;">Edit Student Details</h2>
-					<form action="EditStudentDetail.php" method="POST">
+					<form action="EditStudentDetail.php" method="POST" id="cancel">
 						<input type="hidden" name="id" value=<?php echo $n['id'] ?>>
 					    <div class="row">
 					      <div class="col-25">
@@ -29,8 +29,20 @@
 					        <label for="dept">Department</label>
 					      </div>
 					      <div class="col-75">
-					        <input type="text" id="dept" name="dept" value="<?php echo $n['dept'];?>">
-					      </div>
+					       	<select class="form-control" name="dept" value="<?php echo $n['dept'];?>">
+					        	<option value="Mathematics">Mathematics</option>
+					        	<option value="Computer Science And Engineering">Computer Science And Engineering</option>
+					        	<option value="IIT">IIT</option>
+					        	<option value="Genetics">Genetics</option>
+					        	<option value="Pharmecy">Pharmecy</option>
+					        	<option value="Physics">Physics</option>
+					        	<option value="Chemistry">Chemistry</option>
+					        	<option value="Zoology">Zoology</option>
+					        	<option value="Botany">Botany</option>
+					        	<option value="International Business">International Business</option>
+					        	<option value="Microbiology And Moleculer Biology">Microbiology And Moleculer Biology</option>
+					      	</select>
+					      </div>						
 					    </div>
 					    <div class="row">
 					      <div class="col-25">
@@ -53,7 +65,10 @@
 					        <label for="status">Status</label>
 					      </div>
 					      <div class="col-75">
-					        <input type="text" name="status" value="<?php echo $n['status'];?>">
+					        <select class="form-control" name="status" value="<?php echo $n['status'];?>">
+					        	<option value="Non-Resident">Non-Resident</option>
+					        	<option value="Resident">Resident</option>
+					      	</select>
 					      </div>
 					    </div>
 					   	<div class="row">

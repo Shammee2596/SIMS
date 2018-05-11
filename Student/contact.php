@@ -5,13 +5,13 @@
     $fromEmail = 'sumayashammee@gmail.com';
     $fromName = 'Demo contact form';
 
-    $sendToEmail = 'sumayashammee@yahoo.com';
+    $sendToEmail = 'nahian9009@gmail.com';
     $sendToName = 'Demo contact form';
 
     $subject = 'New message from contact form';
 
     // smtp credentials and server
-    $smtpHost = 'smtp.domain.com';
+    $smtpHost = 'sumayashammee@gmial.com';
     $smtpUsername = 'sumayashammee@gmail.com';
     $smtpPassword = 'fatimaFarhana1992';
 

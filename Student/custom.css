@@ -1,16 +1,31 @@
 body {
     font-family: 'Lato', sans-serif;
+    background-color: rgba(9, 138, 150,0.7);
 }
 h1{
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 label {
     color: #333;
+
 }
 .btn-send {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 20px;
+}
+#nav{
+	height: 50px;
+}
+select{
+    width: 295px;
+    padding: 12px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius:5px;    
 }
 

@@ -1,16 +1,5 @@
-/*!
- * Validator v0.11.5 for Bootstrap 3, by @1000hz
- * Copyright 2016 Cina Saffary
- * Licensed under http://opensource.org/licenses/MIT
- *
- * https://github.com/1000hz/bootstrap-validator
- */
-
 +function ($) {
   'use strict';
-
-  // VALIDATOR CLASS DEFINITION
-  // ==========================
 
   function getValue($el) {
     return $el.is('[type="checkbox"]') ? $el.prop('checked')                                     :

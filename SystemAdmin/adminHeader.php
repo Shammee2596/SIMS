@@ -19,7 +19,7 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
   		<!-- <link rel="stylesheet" type="text/css" href="cssFile/home.css"> -->
   		<link rel="stylesheet" type="text/css" href="../cssFile/systeamAdmin1.css">
-  		<link rel="stylesheet" type="text/css" href="../cssFile/AddStudent.css">
+  		<link rel="stylesheet" type="text/css" href="../cssFile/AddBM.css">
 	</head>
 	
 	<body>

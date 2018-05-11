@@ -2,13 +2,13 @@
 	include'adminHeader.php';
 ?>
 				
-						<div class="col-lg-2"></div>
-							<div class="col-lg-6">
+						<div class="col-lg-3"></div>
+							<div class="col-lg-5" id="bm">
 								<div class="col-lg-12" id="head"></div>
-								<div id="heading"> Add New Board Member </div>
+								<h1 style="color: white; text-align: center;"> Add New Board Member </h1>
 								<div class="form">
 									<form action="bmInformation.php" method="POST">
-
+ 
 										<div class="form-group">
 									    	<label for="name">Name*</label>
 									    	<input type="text" class="form-control" name="name">
@@ -65,7 +65,7 @@
 									  	<div>
 					 						<div class="col-lg-3"></div>
 					 						<div class="col-lg-6">
-					 	   						<button type="submit" class="btn btn-default" id="submit">Submit</button>
+					 	   						<button type="submit" class="btn btn-success btn-send" id="submit">Submit</button>
 					 						</div>
 					 					</div> 
 

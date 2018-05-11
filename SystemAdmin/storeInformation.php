@@ -2,7 +2,6 @@
 	session_start();
 	include_once '../Authentication/dbh.db.php';
 
-
 	if(isset($_POST['submit'])){
 		$name  = mysqli_real_escape_string($conn,$_POST['name']) ;
 		$regNo = mysqli_real_escape_string($conn, $_POST['regNo']);
@@ -12,7 +11,7 @@
 		$residenceShipStatus = mysqli_real_escape_string($conn,$_POST['status']);
 		$presentAddress = mysqli_real_escape_string($conn,$_POST['presentAddress']);
 		$permanentAddress = mysqli_real_escape_string($conn,$_POST['permanentAddress']);
-		$localGuardianContactNo = mysqli_real_escape_string($conn,$_POST['lContactNo']);
+		//$localGuardianContactNo = mysqli_real_escape_string($conn,$_POST['lContactNo']);
 		$bloodGroup = $_POST['bloodGroup'];
 		echo "$localGuardianContactNo";
 
@@ -21,14 +20,14 @@
 		$resultCheck = mysqli_num_rows($result);
 
 		if ($resultCheck>0) {
-			echo "<br>";
+			header("location:systemAdmin1.php? duplicate reg no"); //WE HAVE TO SHOW A ALERT MESSAGE FOR THIS
 		}
 		else{
 
 			$sql = "INSERT INTO studentfullinformation(regNo,name,session,dept,classRoll,status,
-			presentAddress,permanentAddress,l_contactNumber,bloodGroup)
+			presentAddress,permanentAddress,bloodGroup)
 			VALUES('$regNo', '$name', '$session', '$dept', '$classRoll', '$residenceShipStatus',
-			'$presentAddress', '$permanentAddress', '$localGuardianContactNo', '$bloodGroup')";
+			'$presentAddress', '$permanentAddress', '$bloodGroup')";
 			mysqli_query($conn,$sql);
 			$_SESSION['message'] = "Address saved"; 
 			header("location:systemAdmin1.php");
@@ -38,6 +37,11 @@
 	}
 	
 	//print_r($result);
+?>
+
+<?php
+	
+
 ?>
 	<?php if (isset($_SESSION['message'])): ?>
 	<div class="msg">

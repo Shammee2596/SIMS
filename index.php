@@ -21,8 +21,12 @@
 	</head>	
 
 	<body>
+
+
 		<header id="header">
 			<nav class="navbar navbar-inverse" role = "banner">
+
+
 				<div class="container">
 					<div class="col-lg-12"><p id="title"> Student Information Management System</p></div>
 				    <div class="navbar-header">
@@ -34,9 +38,14 @@
 		                </button>
 				     	<!-- <a class="navbar-brand" href="#">Student Information <br>Management System</a> -->
 				    </div>
+
+
 				    <div class="collapse navbar-collapse navbar-right">
+                		
                 		<ul class="nav navbar-nav">
+
                 			<li class="active"><a href="#">Home</a></li>
+                			
                 			<li class="dropdown" >
 		                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Hall <i class="fa fa-angle-down"></i></a>
 		                        <ul class="dropdown-menu" style="width:250px">
@@ -45,17 +54,23 @@
 									<li><a href="#">DU at a Glance</a></li>
 								</ul>
 							</li>
+
 							<li>
 								<a href="Authentication/login1.php"><span class="glyphicon glyphicon-log-in"></span>Login</a>
 						    </li>
+
 							<li>
 								<a href="Authentication/signUp.php">Sign Up</a>
 						    </li>
 				    	</ul>
+
 				    </div>
+
 				</div>
 			</nav>
 		</header>
+
+
 
 		<section id="slider" class="no-margin">
 			<div class="container-fluid">
@@ -64,7 +79,7 @@
 				    <ol class="carousel-indicators">
 				      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				      <li data-target="#myCarousel" data-slide-to="1"></li>
-				      <li data-target="#myCarousel" data-slide-to="2"></li>
+				     <!--  <li data-target="#myCarousel" data-slide-to="2"></li> -->
 			    	</ol>
 
 			    <!-- Wrapper for slides -->
@@ -72,26 +87,18 @@
 			      		<div class="item active">
 			        		<img src="images/hall5.jpg" style="width:100%; height: 200px">
 			        		<div class="carousel-caption">
-			          			<h3>Los Angeles</h3>
-			          			<p>LA is always so much fun!</p>
+			          			<!-- <h3>Los Angeles</h3>
+			          			<p>LA is always so much fun!</p> -->
 			        		</div>
 			      		</div>
 
 			      		<div class="item">
 			        		<img src="images/hall4.jpg" style="width:100%; height: 250px">
 			        		<div class="carousel-caption">
-					    	    <h3>Chicago</h3>
-			    		      	<p>Thank you, Chicago!</p>
+					    	   <!--  <h3>Chicago</h3>
+			    		      	<p>Thank you, Chicago!</p> -->
 			        		</div>
 			      		</div>
-			    
-			      		<!-- <div class="item">
-			        		<img src="hall4.jpg" style="width:100% height:200px">
-			        		<div class="carousel-caption">
-			          			<h3>New York</h3>
-			          			<p>We love the Big Apple!</p>
-			        		</div>
-			      		</div> -->
 			      	</div>
 			    <!-- Left and right controls -->
 				    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -105,6 +112,8 @@
 				</div>
 			</div>
 		</section>
+
+
 		<section id="space"></section>
 			<section id="middle">
 				<div class="container-fluid">
@@ -117,8 +126,12 @@
 						            <div class="row">
 						                <div class="col-xs-12">
 						                    <ul class="demo1">
-						                    	<?php while ($row=mysqli_fetch_assoc($result)) {?>
-						                        <li class="news-item">
+
+						                    	<?php  
+						                    		$count = 1;
+						                    		while ($row=mysqli_fetch_assoc($result)) {?>
+
+						                    		<li class="news-item">
 						                            <table cellpadding="4">
 						                                <tr>
 						                                    <td>
@@ -127,37 +140,13 @@
 						                                </tr>
 						                            </table>
 						                    	</li>
-						                    	<?php } ?>
-						                       <!--  <li class="news-item">
-						                            <table cellpadding="4">
-						                                <tr>
-						                                    <td>
-						                                        <h4 class='list-group-item-heading'>রাষ্ট্রবিজ্ঞান বিভাগরে অধীনে মাস্টার ইন গভার্নেন্স স্টাডিজ (এমজিএস) ৯ম ব্যাচ ১ম সেমিস্টার ভর্তি বিজ্ঞপ্তি</h4>     
-						                                        <a href="#">Read more...</a>
-						                                    </td>
-						                                </tr>
-						                            </table>
-						                    	</li> -->
-						                     <!--    <li class="news-item">
-						                            <table cellpadding="4">
-						                                <tr>
-						                                    <td>
-						                                        <h4 class='list-group-item-heading'>রাষ্ট্রবিজ্ঞান বিভাগরে অধীনে মাস্টার ইন গভার্নেন্স স্টাডিজ (এমজিএস) ৯ম ব্যাচ ১ম সেমিস্টার ভর্তি বিজ্ঞপ্তি</h4>       
-						                                        <a href="#">Read more...</a>
-						                                    </td>
-						                                </tr>
-						                            </table>
-						                    	</li>
-						                        <li class="news-item">
-						                            <table cellpadding="4">
-						                                <tr>
-						                                    <td>
-						                                        <h4 class='list-group-item-heading'>রাষ্ট্রবিজ্ঞান বিভাগরে অধীনে মাস্টার ইন গভার্নেন্স স্টাডিজ (এমজিএস) ৯ম ব্যাচ ১ম সেমিস্টার ভর্তি বিজ্ঞপ্তি</h4>     
-						                                        <a href="#">Read more...</a>
-						                                    </td>
-						                                </tr>
-						                            </table>
-						                    	</li> -->
+
+						                    	<?php
+						                    			$count = $count + 1;
+						                    			if($count == 6)
+						                    				break;
+						                    		} ?>
+
 						                    </ul>
 						                </div>
 						            </div>
@@ -209,7 +198,7 @@
 		<script type="text/javascript">
 	    	$(function () {
 	        	$(".demo1").bootstrapNews({
-	            	newsPerPage: 2,
+	            	newsPerPage: 4,
 	            	autoplay: true,
 					pauseOnHover:true,
 	            	direction: 'up',

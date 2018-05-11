@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: rgba(9, 138, 150,0.7);
 }
 form {border: 0px solid #f1f1f1;}
 
@@ -17,6 +17,8 @@ input[type=text], input[type=password],input[type=email] {
 }
 #form{
     background-color:  #048277;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 select{
     width: 300px;
@@ -74,17 +76,12 @@ span.psw {
     padding-left: 20px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-/*@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}*/
 .help-block{
     color: white;
     font-size: 11px
+}
+p{
+    padding-top: 10px;
+    color: white;
+    font-size: 18px;
 }
