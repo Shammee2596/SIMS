@@ -35,7 +35,7 @@ if (isset($_POST['CreateAccount'])) {
 		}
 		header("Location: ../index.php? signup=success");
 		exit();
-	}
+446	}
 	
 	
 }
