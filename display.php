@@ -3,13 +3,12 @@
 
 	$sql = "SELECT * FROM studentfullinformation";
 	$result = mysqli_query($conn, $sql);
-	$resultCheck = mysqli_num_rows($result);
-
-	
+	$resultCheck = mysqli_num_rows($result);	
 ?>
 <?php
-	include 'BMHeader.php';
+	include 'adminHeader.php';
 ?>
+
 		<div class="col-lg-12"> 
 			<div>
 				<div class="col-lg-8"><h2> Student Information </h2></div>
@@ -57,7 +56,7 @@
 								<td><?php echo $row['bloodGroup']; ?></td>
 								<td><?php echo $row['status']; ?></td>
 								<td>
-									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
+									<a href='../SystemAdmin/editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
 									<a href='DeleteStudent.php?delete=<?php echo $row['id']; ?> ' class='del_btn'>Delete</a>
@@ -127,7 +126,8 @@
 
 		
 	</script>
+
 <?php
-	include 'BMFooter.php';
-?>					
+	include 'adminFooter.php';
+?>
 
