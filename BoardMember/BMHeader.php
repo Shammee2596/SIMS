@@ -67,7 +67,7 @@
 					<div class="container">
 						<div>
 							<img src="../icon/av.png" alt="Avatar" id="image">
-							<div id="imageTxt"> Welcome <?php echo $_SESSION["u_id"]; ?></div>	
+							<div id="imageTxt"><?php echo $_SESSION["u_id"]; ?></div>	
 						</div>
 						<!-- <div class ="menu">
 							<span class="glyphicon glyphicon-menu-hamburger">Menu</span>

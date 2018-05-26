@@ -41,7 +41,8 @@
 							</div>
 						</div>	
 						<div class="col-lg-1"></div>
-						<div class="col-lg-6">
+						<div class="col-lg-6"></div>
+						<!--<div class="col-lg-6">
 							<form class="navbar-form navbar-left">
 							  <div class="input-group">
 							    <input type="text" class="form-control" placeholder="Search">
@@ -54,7 +55,7 @@
 							</form>
 
 						</div>
-						<div class="col-lg-1"></div>
+ -->						<div class="col-lg-1"></div>
 						<div class="col-lg-2">
 							<form class="form-inline" action= "../Authentication/logoutTest.php" method="POST">
 								<div class="form-group" id="logout">

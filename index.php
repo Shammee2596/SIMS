@@ -51,7 +51,7 @@
 		                        <ul class="dropdown-menu" style="width:250px">
 		                            <li><a href="#">About Hall</a></li>
 									<li><a href="#">Co-curricular</a></li>
-									<li><a href="#">DU at a Glance</a></li>
+									<!-- <li><a href="#">DU at a Glance</a></li> -->
 								</ul>
 							</li>
 
