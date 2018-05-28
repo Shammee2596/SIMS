@@ -51,10 +51,8 @@
 		                            <li><a href="#about">About Hall</a></li>
 		                            <!-- <li><a href="#staff">Staffs</a></li> -->
 									<li><a href="#">Co-curricular</a></li>
-<<<<<<< HEAD
-=======
 									<!-- <li><a href="#">DU at a Glance</a></li> -->
->>>>>>> 84cf79f66cbde6422eb41b2b251d68569079c94b
+
 								</ul>
 							</li>
 
