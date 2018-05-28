@@ -1,6 +1,6 @@
 <?php
 	include_once'Authentication/dbh.db.php';
-	$sql = "SELECT * FROM notice";
+	$sql = "SELECT * FROM notice order by notice_id desc";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);
 
@@ -20,7 +20,6 @@
 	</head>	
 
 	<body>
-
 
 		<header id="header">
 			<nav class="navbar navbar-inverse" role = "banner">
@@ -118,6 +117,7 @@
 		<section id="middle">
 			<div class="container-fluid">
 				<div class="row">
+					<div class="col-md-8"></div>
 				<!--Notice Board-->
 					<div class="col-md-4">
 						<div class="panel panel-default">
@@ -146,15 +146,15 @@
 						                    	if($count == 6)
 						                    		break;
 						                    	} ?>
-
+						                    	<li><a href="notices.php">See More... </a></li>	
 						                </ul>
 						            </div>
 						        </div>
 						    </div>
-						    <div class="panel-footer"> </div>
+						    <div class="panel-footer"></div>
 						</div>
 					</div><!--/. Latest News -->
-					<div class="col-md-2"></div>
+					
 						<!-- <div class="col-md-5">
 						    <div class="panel panel-default">
 						        <div class="panel-heading"> <span class="glyphicon glyphicon-list-alt"></span><b>Upcoming Event</b></div>
