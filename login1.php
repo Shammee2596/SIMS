@@ -26,7 +26,6 @@
             <div class="container">
               <label for="uname"><b>Username</b></label><br>
               <input type="text" placeholder="Enter Username" name="username"><br>
-              
               <p id="username-alert" style="color: red; font-size: 14px"></p>
 
               <label for="psw"><b>Password</b></label><br>

@@ -13,14 +13,8 @@
 	$resultCheck = mysqli_num_rows($result);
 
 	if($resultCheck < 1){
-?>
-		<script type="text/javascript">
-			/*window.location.href = 'http://www.google.com.au/';*/
-			window.location = 'login1.php';
-			alert("Either username or password is invalid");
-		</script>
-
-<?php 
+		header("Location: ../index.php? login=empty");
+		exit();
 	}
 	else{
 		if($row = mysqli_fetch_array($result))
@@ -37,28 +31,21 @@
 
 				echo $_SESSION["u_id"];
 
-				if($_SESSION['user_type'] == 'admin'){ 
-?>
-					<script type="text/javascript">
-						window.location = '../SystemAdmin/systemAdmin1.php';
-					</script>
-<?php	
+				if($_SESSION['user_type'] == 'admin'){
+				header("Location: ../SystemAdmin/systemAdmin1.php? login = success");
 				}
 				else if($_SESSION['user_type'] == 'board_member'){
-					header("Location: ../BoardMember/BM.php?");
+					header("Location: ../BoardMember/BM.php? login = success");
 				}
 				else if($_SESSION['user_type'] == 'student'){
-					header("Location: ../Student/student.php?");
+					header("Location: ../Student/student.php? login = success");
 				}
 				
 			}
-			else{	
-?>
-				<script type="text/javascript">
-					window.location = 'login1.php';
-					alert("Invalid username or password")
-				</script>
-<?php
+			else{
+				header("Location:login1.php? login=Maaaaaa");
+				exit();
+
 			}
 		}
 	}
