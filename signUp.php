@@ -10,7 +10,7 @@
 	 	<script src="jquery-3.3.1.min.js"></script>
 	 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-	  	<link rel="stylesheet" type="text/css" href="authentication.css">
+	  	<link rel="stylesheet" type="text/css" href="../cssFile/authentication.css">
 	</head>
 	<body>
 		<div class="container">
@@ -18,7 +18,7 @@
 	        <div class="col-lg-4"></div>
 	        <div class="col-lg-4" id="form">
 	          <h2 style="text-align: center;">SignUp Form</h2>
-	          <form action="/action_page.php">
+	          <form action="register.php" method="POST">
 	            <!-- <div class="imgcontainer">
 	              <img src="icon/av.png" alt="Avatar" class="avatar">
 	            </div> -->
@@ -32,7 +32,7 @@
 	              	<input type="text" placeholder="Enter Registration no." name="regNo" required><br>
 	              	<!-- <p class="help-block"></p> -->
 
-	              	<label for="dept"><b>Department</label><br>
+	              	<label for="department"><b>Department</label><br>
 				  	<select name="dept">
 						<option value="Mathematics">Mathematics</option>
 						<option value="Computer Science And Engineering">Computer Science And Engineering</option>
@@ -43,6 +43,7 @@
 						<option value="Chemistry">Chemistry</option>
 						<option value="Zoology">Zoology</option>
 						<option value="Botany">Botany</option>
+						<option value="International Business">International Business</option>
 						<option value="Microbiology And Moleculer Biology">Microbiology And Moleculer Biology</option>
 					</select><br>
 
@@ -52,8 +53,8 @@
 	              	<label for="username"><b>Username</label><br>
 	             	<input type="text" placeholder="Enter Fullname" name="username" required><br>
 	             	<label for="psw"><b>Password</b></label><br>
-	              	<input type="password" placeholder="Enter Password" name="psw" required><br>
-	                <button type="submit">Register</button><br>
+	              	<input type="password" placeholder="Enter Password" name="password" required><br>
+	                <button type="submit" name="CreateAccount">Register</button><br>
 	            </div>	
 	            <div class="container">
 					 <button type="button" class="cancel">Cancel</button>

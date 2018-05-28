@@ -63,6 +63,9 @@
                                         <option value="Electricity Problem">Electricity Problem</option>
                                         <option value="Gas Problem"> Gas Problem</option>
                                         <option value="Cleaning Problem"> Cleaning Problem</option>
+                                        <option value="Cooperation Problem"> Cooperation Problem</option>
+                                        <option value="Adjustment Problem"> Adjustment Problem</option>
+                                        <option value="Political Issue"> Political Issue</option>
                                     </select>  
                                 </div>
                             </div>

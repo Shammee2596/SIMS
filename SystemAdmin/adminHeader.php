@@ -41,7 +41,13 @@
 								</div>
 							</div>
 						</div>	
+<<<<<<< HEAD
 						<!-- <div class="col-lg-6">
+=======
+						<div class="col-lg-1"></div>
+						<div class="col-lg-6"></div>
+						<!--<div class="col-lg-6">
+>>>>>>> 84cf79f66cbde6422eb41b2b251d68569079c94b
 							<form class="navbar-form navbar-left">
 							  <div class="input-group">
 							    <input type="text" class="form-control" placeholder="Search">
@@ -53,8 +59,13 @@
 							  </div>
 							</form>
 
+<<<<<<< HEAD
 						</div> -->
 						<div class="col-lg-8"></div>
+=======
+						</div>
+ -->						<div class="col-lg-1"></div>
+>>>>>>> 84cf79f66cbde6422eb41b2b251d68569079c94b
 						<div class="col-lg-2">
 							<form class="form-inline" action= "../Authentication/logoutTest.php" method="POST">
 								<div class="form-group" id="logout">
