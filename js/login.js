@@ -24,9 +24,5 @@ function validateLoginForm(){
 	}
 
 	return true;
-/*re = /^[a-zA-Z_]{5,}$/; //5 or more chars
-	if(!re.test(username)){
-		document.getElementById("username-alert").innerHTML=" username field";
-		isError =1;
-	}*/
+
 } 

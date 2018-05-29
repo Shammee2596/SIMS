@@ -34,10 +34,6 @@
               <p id="password-alert" style="color: red; font-size: 14px"></p>   
               
               <button type="submit" name="login">Login</button><br>
-              
-              <!-- <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label> -->
             </div>
 
             <div class="container" style="background-color:#f1f1f1 width:300px;">

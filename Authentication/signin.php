@@ -56,7 +56,7 @@
 ?>
 				<script type="text/javascript">
 					window.location = 'login1.php';
-					alert("Invalid username or password")
+					alert("Invalid username or password");
 				</script>
 <?php
 			}

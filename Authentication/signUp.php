@@ -10,7 +10,9 @@
 	 	<script src="jquery-3.3.1.min.js"></script>
 	 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../js/signup.js"></script>
 	  	<link rel="stylesheet" type="text/css" href="../cssFile/authentication.css">
+	  	
 	</head>
 	<body>
 		<div class="container">
@@ -18,22 +20,23 @@
 	        <div class="col-lg-4"></div>
 	        <div class="col-lg-4" id="form">
 	          <h2 style="text-align: center;">SignUp Form</h2>
-	          <form action="register.php" method="POST">
-	            <!-- <div class="imgcontainer">
-	              <img src="icon/av.png" alt="Avatar" class="avatar">
-	            </div> -->
+	          <form name="signupForm" onsubmit ="return studentValidation()"  action= "register.php" method="POST">
 
 	            <div class="container">
 	              	<label for="name"><b>Name</label><br>
-	              	<input type="text" placeholder="Enter Fullname" name="name" required><br>
-	              	<p class="help-block">Username can contain any letters or numbers, without spaces</p>
+	              	<input type="text" placeholder="Enter Fullname" name="name"><br>
+	              	<p id="name-alert" style="color: red; font-size: 14px"></p>
+
 
 	              	<label for="regNo"><b>Registration No.</label><br>
-	              	<input type="text" placeholder="Enter Registration no." name="regNo" required><br>
+	              	<input type="text" placeholder="Enter Registration no." name="regNo"><br>
+	              	<p id="regNo-alert" style="color: red; font-size: 14px"></p>
+
 	              	<!-- <p class="help-block"></p> -->
 
 	              	<label for="department"><b>Department</label><br>
 				  	<select name="dept">
+				  		<option value="">Choose One</option>
 						<option value="Mathematics">Mathematics</option>
 						<option value="Computer Science And Engineering">Computer Science And Engineering</option>
 						<option value="IIT">IIT</option>
@@ -46,14 +49,26 @@
 						<option value="International Business">International Business</option>
 						<option value="Microbiology And Moleculer Biology">Microbiology And Moleculer Biology</option>
 					</select><br>
+					<p id="dept-alert" style="color: red; font-size: 14px"></p>
+
 
 	             	<label for="email"><b>Email</label><br>
-	              	<input type="email" placeholder="Enter Email" name="email" required><br>
+	              	<input type="email" placeholder="Enter Recovery Email" name="email"><br>
+	              	<p id="email-alert" style="color: red; font-size: 14px"></p>
+
 
 	              	<label for="username"><b>Username</label><br>
-	             	<input type="text" placeholder="Enter Fullname" name="username" required><br>
+	             	<input type="text" placeholder="Enter username" name="username"><br>
+	             	<p id="username-alert" style="color: red; font-size: 14px"></p>
+
 	             	<label for="psw"><b>Password</b></label><br>
-	              	<input type="password" placeholder="Enter Password" name="password" required><br>
+	              	<input type="password" placeholder="Enter Password" name="password"><br>
+	              	<p id="password-alert" style="color: red; font-size: 14px"></p>
+
+	              	<label for="psw"><b>Confirm Password</b></label><br>
+	              	<input type="password" placeholder="Confirm Password" name="conPassword"><br>
+	              	<p id="conPassword-alert" style="color: red; font-size: 14px"></p>
+
 	                <button type="submit" name="CreateAccount">Register</button><br>
 	            </div>	
 	            <div class="container">

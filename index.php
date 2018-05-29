@@ -16,7 +16,7 @@
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-	  	<link rel="stylesheet" type="text/css" href="home1.css">
+	  	<link rel="stylesheet" type="text/css" href="cssFile/home1.css">
 	</head>	
 
 	<body>
@@ -84,7 +84,7 @@
 			    <!-- Wrapper for slides -->
 			    	<div class="carousel-inner">
 			      		<div class="item active">
-			        		<img src="images/hall5.jpg" style="width:100%; height: 200px">
+			        		<img src="images/hall2.jpg" style="width:100%; height: 200px">
 			        		<div class="carousel-caption">
 			          			<!-- <h3>Los Angeles</h3> -->
 			          			
@@ -92,7 +92,7 @@
 			      		</div>
 
 			      		<div class="item">
-			        		<img src="images/hall4.jpg" style="width:100%; height: 250px">
+			        		<img src="images/hall1.jpg" style="width:100%; height: 250px">
 			        		<div class="carousel-caption">
 					    	   <!-- <h3>Chicago</h3> -->
 			        		</div>

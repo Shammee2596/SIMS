@@ -3,12 +3,13 @@
 
 	$sql = "SELECT * FROM studentfullinformation";
 	$result = mysqli_query($conn, $sql);
-	$resultCheck = mysqli_num_rows($result);	
+	$resultCheck = mysqli_num_rows($result);
+
+	
 ?>
 <?php
-	include 'adminHeader.php';
+	include '../BoardMember/BMHeader.php';
 ?>
-
 		<div class="col-lg-12"> 
 			<div>
 				<div class="col-lg-8"><h2> Student Information </h2></div>
@@ -56,11 +57,11 @@
 								<td><?php echo $row['bloodGroup']; ?></td>
 								<td><?php echo $row['status']; ?></td>
 								<td>
-									<a href='../edit/editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
+									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
-									<form  action="deleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
-										<button onclick="return myFunction()" class="del_btn">Delete</button>
+									<form  action="DeleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
+										<button onclick="return myFunction()">Delete</button>
 									
 									</form>
 								</td>
@@ -125,7 +126,7 @@
 		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 		    });
 		  });
-		});
+		});	
 		function myFunction() {
 		    var txt;
 		    if (confirm("Press a button!")) {
@@ -134,10 +135,8 @@
 		        return false;
 		    }
 		}	
-		
 	</script>
-
 <?php
-	include 'adminFooter.php';
-?>
+	include 'BMFooter.php';
+?>					
 

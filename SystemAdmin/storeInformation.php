@@ -30,7 +30,7 @@
 			'$presentAddress', '$permanentAddress', '$bloodGroup')";
 			mysqli_query($conn,$sql);
 			$_SESSION['message'] = "Address saved"; 
-			header("location:systemAdmin1.php");
+			header("location:display.php");
 		}
 		$sql1 ="SELECT * FROM studentfullinformation WHERE regNo = '$regNo';";
 		$result = mysqli_query($conn, $sql);

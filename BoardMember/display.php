@@ -60,7 +60,10 @@
 									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
-									<a href='DeleteStudent.php?delete=<?php echo $row['id']; ?> ' class='del_btn'>Delete</a>
+									<form  action="DeleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
+										<button onclick="return myFunction()">Delete</button>
+									
+									</form>
 								</td>
 							</tr>
 						</tbody>
@@ -123,9 +126,15 @@
 		      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 		    });
 		  });
-		});
-
-		
+		});	
+		function myFunction() {
+		    var txt;
+		    if (confirm("Press a button!")) {
+		        return true;
+		    } else {
+		        return false;
+		    }
+		}	
 	</script>
 <?php
 	include 'BMFooter.php';

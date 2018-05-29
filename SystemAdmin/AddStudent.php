@@ -63,7 +63,7 @@
 							<div class="col-md-6">
 								<div class="form-group">
 					    			<label for="roll">Class roll*</label>
-					    			<input type="text" class="form-control" name="roll" placeholder="Enter Session">
+					    			<input type="text" class="form-control" name="roll" placeholder="Enter Classroll">
 					  			</div> 
 							</div>
 							<div class="col-md-6">

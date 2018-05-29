@@ -1,16 +1,44 @@
-function userValidation(){
+function studentValidation(){
 
-    var userName= document.forms['signupForm']['userName'].value;
-    var password= document.forms['signupForm']['password'].value;
-    var confirmPassword= document.forms['signupForm']['confirmPassword'].value;
-    var recoveryPin= document.forms['signupForm']['recoveryPin'].value;
-    var institute= document.forms['signupForm']['institute'].value;
+    var name    =   document.forms['signupForm']['name'].value;
+    var regNo   =   document.forms['signupForm']['regNo'].value;
+    var dept    =   document.forms['signupForm']['dept'].value;
+    var email     = document.forms['signupForm']['email'].value;
+    var userName=   document.forms['signupForm']['username'].value;
+    var password=   document.forms['signupForm']['password'].value;
+    var confirmPassword = document.forms['signupForm']['conPassword'].value;
+    
 
     var isError = 0;
+    document.getElementById("name-alert").innerHTML = "";
+    document.getElementById("regNo-alert").innerHTML = "";
+    document.getElementById("dept-alert").innerHTML = "";
     document.getElementById("username-alert").innerHTML="";
     document.getElementById("password-alert").innerHTML="";
-    document.getElementById("confirmPassword-alert").innerHTML="";
-    document.getElementById("recoveryPin-alert").innerHTML="";
+    document.getElementById("conPassword-alert").innerHTML="";
+    document.getElementById("email-alert").innerHTML="";
+    var isemail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+
+    if(name == "" || name == null){
+        document.getElementById("name-alert").innerHTML="Please fill the name field";
+        isError=1;
+    }
+    if(regNo == "" || regNo == null){
+        document.getElementById("regNo-alert").innerHTML="Please fill the Registration Number";
+        isError=1;
+    }
+    if(dept =="" || dept == null){
+        document.getElementById("dept-alert").innerHTML = "Select department";
+        isError =1;
+    }
+
+    if(email == "" || email == null){
+        document.getElementById("email-alert").innerHTML="Please fill the email field";
+        isError=1;
+    }else if(!isemail){
+        document.getElementById("email-alert").innerHTML="Enter a valid email";
+        isError=1;
+    }
 
     if(userName == "" || userName == null){
         document.getElementById("username-alert").innerHTML="Please fill the username field";
@@ -31,26 +59,21 @@ function userValidation(){
 
 
     if(confirmPassword=="" || confirmPassword==null){
-        document.getElementById("confirmPassword-alert").innerHTML="Please confirm the password";
+        document.getElementById("conPassword-alert").innerHTML="Please confirm the password";
         isError=1;
     }else if(password != confirmPassword){
-        document.getElementById("confirmPassword-alert").innerHTML="Password didn't match";
+        document.getElementById("conPassword-alert").innerHTML="Password didn't match";
         isError=1;
     }
 
-    var numberPattern = /^[0-9]+$/;
-    if(recoveryPin=="" || recoveryPin== null){
-        document.getElementById("recoveryPin-alert").innerHTML="Recovery Pin must be filled";
-        isError=1;
-    }else if(recoveryPin.length != 4 || isNaN(recoveryPin) || !numberPattern.test(recoveryPin)){
-        document.getElementById("recoveryPin-alert").innerHTML="Recovery Pin must be 4 characters long Number";
-        isError=1;
-    }
+    
 
 
     if(isError == 1){
         return false;
+    }else{
+     return true;   
     }
-    return true;
+    
 
 }
