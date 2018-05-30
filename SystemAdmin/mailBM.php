@@ -44,20 +44,23 @@ require 'SMTP.php';
 					//$hashedPwdCheck = password_verify($pwd, $db_password);
 
 					if($email == $db_email){
-						echo "Hello";
 						$_SESSION["u_id"] = $db_uname;
 						$_SESSION['user_type'] = $db_type;
 						$_SESSION['code'] = $db_code;
 					}
 			}?>
 			<script>
-				window.location = '../../SystemAdmin/AddBM.php';
+				window.location = 'AddBM.php';
 				alert("Mail Sent");
 			</script>
 		<?php
 		}		
-	}else{
-		echo("Please recheck the entered email");
+	}else{?>
+		<script>
+			window.location = 'AddBM.php';
+			alert("Please recheck the entered email");
+		</script>
+	<?php	
 	}
 
 ?>

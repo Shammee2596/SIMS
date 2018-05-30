@@ -9,7 +9,7 @@
 								<h1 style="color: white; text-align: center;"> Add New Board Member </h1>
 								
 								<div class="form">
-									<form name = "bmForm" onsubmit="return validateForm()" action="bmInformation.php" method="POST">
+									<form name = "bmForm" onsubmit="return validateForm()" action="bmInformation.php" method="POST" id="cancel">
  
 										<div class="form-group">
 									    	<label for="name">Name*</label>
@@ -88,9 +88,12 @@
 									  	</div>
 
 									  	<div>
-					 						<div class="col-lg-3"></div>
+					 						<div class="col-lg-1"></div>
 					 						<div class="col-lg-6">
 					 	   						<button type="submit" class="btn btn-success btn-send" id="submit">Add BM</button>
+					 						</div>
+					 						<div class="col-lg-5">
+					 							<button type="button" onclick="myFunction()" class=" btn btn-danger" style="padding: 12px 20px">Cancel</button>
 					 						</div>
 					 					</div> 
 
@@ -180,11 +183,13 @@
     }else{
      return true;   
     }
-
 }
+	
+	  function myFunction() {
+	    document.getElementById("cancel").reset();
+	}
 
-
-	</script>
+</script>
 
 <?php
 	include'adminFooter.php';
