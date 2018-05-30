@@ -8,7 +8,7 @@
 	
 ?>
 <?php
-	include 'BMHeader.php';
+	include '../BoardMember/BMHeader.php';
 ?>
 		<div class="col-lg-12"> 
 			<div>
@@ -60,7 +60,7 @@
 									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
-									<form  action="DeleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
+									<form  action="deleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
 										<button onclick="return myFunction()">Delete</button>
 									
 									</form>
@@ -129,7 +129,7 @@
 		});	
 		function myFunction() {
 		    var txt;
-		    if (confirm("Press a button!")) {
+		    if (confirm("Do You want to delete this record?")) {
 		        return true;
 		    } else {
 		        return false;

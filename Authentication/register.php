@@ -26,7 +26,7 @@ if (isset($_POST['CreateAccount'])) {
 	}
 	else if($resultCheck >= 1){
 		while ($row=mysqli_fetch_assoc($result)) {
-			if($row['name'] != $name || $row['dept'] != $dept || $row['email'] != $email){?>
+			if($row['name'] != $name || $row['dept'] != $dept){?>
 				<script>
 					window.location = 'signup.php';
 					alert("Sorry, Provided information don't match with existing database");

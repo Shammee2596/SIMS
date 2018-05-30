@@ -56,7 +56,7 @@
 								<td><?php echo $row['bloodGroup']; ?></td>
 								<td><?php echo $row['status']; ?></td>
 								<td>
-									<a href='../edit/editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
+									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
 									<form  action="deleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
@@ -127,8 +127,7 @@
 		  });
 		});
 		function myFunction() {
-		    var txt;
-		    if (confirm("Press a button!")) {
+		    if (confirm("Do you want to delete this record?")) {
 		        return true;
 		    } else {
 		        return false;

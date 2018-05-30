@@ -81,7 +81,7 @@
 							<a href="#"> View Complain</a>
 						</div>
 						<div class="menu1">
-							<a href="../edit/display.php">View Student Details</a>
+							<a href="display.php">View Student Details</a>
 						</div>
 						<!-- <div class="menu1">
 							<a href="#">Edit Student Information</a>

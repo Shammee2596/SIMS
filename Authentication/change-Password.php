@@ -95,24 +95,44 @@ if($valid==true)
             $query = mysqli_query($conn, $sql);
             $row = mysqli_affected_rows($conn);
             if($row ==1)
-            {
-                echo "Your password successfully changed.";
-                //die;
-            }
-            else{
-                 echo "Your password successfully not changed.";
+            {?>
+                <script>
+                    window.location = 'changePassword.php';
+                    alert("Your password successfully changed.");
+                </script>
+
+
+            <?php }
+            else{?>
+
+                <script>
+                    window.location = 'changePassword.php';
+                    alert("Your password could not be changed.");
+                </script>
+
+            <?php    
             }
         }
         else
-        {
-            echo "Opps, We can not find your data. Please try again.";
-            die;
+        {?>
+            <script>
+                window.location = 'changePassword.php';
+                alert("Opps, We can not find your data. Please try again.");
+            </script>
+
+
+        <?php        
         }
     }
     else
-    {
-        echo "No database record matched with your data.";
-        die;
+    {?>
+        <script>
+            window.location = 'changePassword.php';
+            alert("No database record matched with your data.");
+        </script>
+
+
+    <?php    
     }
 }
 else

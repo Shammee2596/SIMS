@@ -18,13 +18,20 @@
 	$result1 = mysqli_query($conn, $sql1);
 	$resultCheck1 = mysqli_num_rows($result1);
 
-	if ($resultCheck>0) {
-		//header("Location: storeInformation.html? Information already exists");
-		//exit();
-		if ($resultCheck1>0) {
-		echo "sorry";
-		}
-		echo "Duplicate Information";
+	if ($resultCheck>0) {?>
+		<script>
+			window.location = 'AddBM.php';
+			alert("Sorry, Provided information Already exist");
+		</script>
+
+	<?php
+	if ($resultCheck1 >0) {?>
+			<script>
+			window.location = 'AddBM.php';
+			alert("Please Enter Another Username");
+		</script>
+		<?php
+		}	
 	}
 
 	else{
@@ -38,7 +45,6 @@
 			$sql = "DELETE FROM user WHERE username='$userName';";
 			mysqli_query($conn,$sql);
 		}
-		
-
+		include_once 'mailBM.php';
 	}
 ?>
