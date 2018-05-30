@@ -101,11 +101,11 @@ if($valid==true)
             }else{
             if($row ==1)
             {
-                echo "Your password successfully changed.";
+                echo "Your Email was successfully changed.";
                 //die;
             }
             else{
-                 echo "Your password successfully not changed.";
+                 echo "Your Email Could not be changed.";
             }
         }
         }

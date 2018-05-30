@@ -11,26 +11,34 @@
 		$residenceShipStatus = mysqli_real_escape_string($conn,$_POST['status']);
 		$presentAddress = mysqli_real_escape_string($conn,$_POST['presentAddress']);
 		$permanentAddress = mysqli_real_escape_string($conn,$_POST['permanentAddress']);
-		//$localGuardianContactNo = mysqli_real_escape_string($conn,$_POST['lContactNo']);
+		$localGuardianContactNo = mysqli_real_escape_string($conn,$_POST['lContactNo']);
+		$lName = mysqli_real_escape_string($conn,$_POST['lName']);
+		$room_no = mysqli_real_escape_string($conn,$_POST['roomNo']);
 		$bloodGroup = $_POST['bloodGroup'];
-		echo "$localGuardianContactNo";
 
 		$sql = "SELECT * FROM studentfullinformation WHERE regNo = '$regNo';";
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 
-		if ($resultCheck>0) {
-			header("location:systemAdmin1.php? duplicate reg no"); //WE HAVE TO SHOW A ALERT MESSAGE FOR THIS
+		if ($resultCheck>0) {?>
+			<script type="text/javascript">
+				window.location = 'systemAdmin1.php';
+				alert("duplicate reg no");
+			</script>
+		<?php
+			 //WE HAVE TO SHOW A ALERT MESSAGE FOR THIS
 		}
 		else{
 
-			$sql = "INSERT INTO studentfullinformation(regNo,name,session,dept,classRoll,status,
-			presentAddress,permanentAddress,bloodGroup)
-			VALUES('$regNo', '$name', '$session', '$dept', '$classRoll', '$residenceShipStatus',
-			'$presentAddress', '$permanentAddress', '$bloodGroup')";
-			mysqli_query($conn,$sql);
-			$_SESSION['message'] = "Address saved"; 
-			header("location:display.php");
+			$sql = "INSERT INTO studentfullinformation(regNo,name,session,dept,classRoll,status,room_no,
+			presentAddress,permanentAddress,l_contactNumber,bloodGroup,l_name)
+
+			VALUES('$regNo', '$name', '$session', '$dept', '$classRoll', '$residenceShipStatus','$room_no',
+			'$presentAddress', '$permanentAddress', '$localGuardianContactNo','$bloodGroup','$lName')";
+			if(mysqli_query($conn,$sql)){
+				$_SESSION['message'] = "Address saved"; 
+				header("location:display.php");
+			}
 		}
 		$sql1 ="SELECT * FROM studentfullinformation WHERE regNo = '$regNo';";
 		$result = mysqli_query($conn, $sql);

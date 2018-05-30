@@ -22,7 +22,7 @@
         	<div class="col-lg-1"></div>
             <div class="col-lg-5 col-lg-offset-2" style="background-color: #048277;">
             	<h1>Complaint Form</h1>
-            	<p class="lead" style ="text-align: center;">Only Resident Student Can Complaint</p>
+            	<p class="lead" style ="text-align: center;">Only Resident Student Can Complain</p>
 
             	<form id="contact-form" method="post" action="complaint.php" role="form">
                     <div class="messages"></div>
@@ -31,7 +31,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="form_name">Fullname *</label>
-                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your fulltname *" required="required" data-error="Firstname is required.">
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your fullname *" required="required" data-error="Firstname is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

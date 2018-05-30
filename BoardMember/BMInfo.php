@@ -2,7 +2,12 @@
   			session_start();
   			if(!isset($_SESSION["u_id"])) {
   				//echo "not ok";
-  				header("Location: ../index.php? login=waaa");
+  			?>
+  			<script type="text/javascript">
+  				window.location = '../index.php';
+  				alert("Access Denied");
+  			</script>
+  			<?php
   			} 
 ?>
 <?php
@@ -15,7 +20,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Account Recovery</title>
+	<title>Personal Information</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -32,11 +37,32 @@
 					<h2 style="text-align: center;">Board Member Profile</h2>
 					<?php
 						while ($row=mysqli_fetch_assoc($result)) {?>
-							<p class="info"> Name:  <?php echo $row['name'];?></p>
-							<p class="info"> Designation:  <?php echo $row['designation'];?></p>
-							<p class="info"> Department:  <?php echo $row['department'];?></p>
-							<p class="info"> Hall_Post:  <?php echo $row['hall_designation'];?></p>
-							<p class="info"><a href="../Authentication/changePassword.php" style="color: black">Change Password</a></p>
+							<table>
+								<tr>
+									<td>Name</td>
+									<td>:&nbsp</td>
+									<td><?php echo $row['name'];?></td>
+								</tr>
+
+								<tr>
+									<td>Designation</td>
+									<td>:&nbsp</td>
+									<td><?php echo $row['designation'];?></td>
+								</tr>
+
+								<tr>
+									<td>Department</td>
+									<td>:</td>
+									<td><?php echo $row['department'];?></td>	
+								</tr>
+
+								<tr>
+									<td>Hall Designation</td>
+									<td>:</td>
+									<td><?php echo $row['hall_designation'];?></td>
+								</tr>
+							</table>
+							<p class="info"><a href="../Authentication/changePassword.php" style="color: red;">Change Password</a></p>
 							
 					<?php }?>
 

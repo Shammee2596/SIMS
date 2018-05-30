@@ -79,8 +79,13 @@ span.psw {
     color: white;
     font-size: 11px
 }
+td{
+   padding-top: 8px;
+    color: white;
+    font-size: 18px; 
+}
 p{
     padding-top: 8px;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
 }

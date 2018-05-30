@@ -60,7 +60,11 @@
 						                            <table cellpadding="4">
 						                                <tr>
 						                                    <td>
-						                                        <h4 class='list-group-item-heading'><?php echo $row['name'];?></h4>        <a href="notice/<?php echo $row['filePath'] ?>" target="_blank">Read more...</a>
+						                                        <h4 class='list-group-item-heading'>
+						                                        	<?php
+						                                        	 echo $row['name'];
+						                                        	 echo '<br>';
+						                                        		echo '<h6>'.$row['n_date'].'</h6>';?></h4>        <a href="notice/<?php echo $row['filePath'] ?>" target="_blank">Read more...</a>
 						                                    </td>
 						                                </tr>
 						                            </table>

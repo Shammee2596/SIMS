@@ -78,7 +78,7 @@
 						</div>
 					
 						<div class="menu1">
-							<a href="#"> View Complain</a>
+							<a href="viewComplain.php"> View Complain</a>
 						</div>
 						<div class="menu1">
 							<a href="display.php">View Student Details</a>

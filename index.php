@@ -2,7 +2,7 @@
 	include_once'Authentication/dbh.db.php';
 	$sql = "SELECT * FROM notice order by notice_id desc";
 	$result = mysqli_query($conn, $sql);
-	$resultCheck = mysqli_num_rows($result);
+	//$resultCheck = mysqli_num_rows($result);
 
 ?>
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
 		                        <ul class="dropdown-menu" style="width:250px">
 		                            <li><a href="#about">About Hall</a></li>
 		                            <!-- <li><a href="#staff">Staffs</a></li> -->
-									<li><a href="#">Co-curricular</a></li>
+									<li><a href="#contact">Contact Us</a></li>
 									<!-- <li><a href="#">DU at a Glance</a></li> -->
 
 								</ul>
@@ -135,7 +135,11 @@
 						                            <table cellpadding="4">
 						                                <tr>
 						                                    <td>
-						                                        <h4 class='list-group-item-heading'><?php echo $row['name'];?></h4>        <a href="notice/<?php echo $row['filePath'] ?>" target="_blank">Read more...</a>
+						                                        <h4 class='list-group-item-heading'>
+						                                        	<?php echo $row['name'];
+						                                        		echo '<br>';
+						                                        		echo '<h6>'.$row['n_date'].'</h6>';?>
+						                                        	</h4><a href="notice/<?php echo $row['filePath'] ?>" target="_blank">Read more...</a>
 						                                    </td>
 						                                </tr>
 						                            </table>
@@ -143,7 +147,7 @@
 
 						                    <?php
 						                    	$count = $count + 1;
-						                    	if($count == 6)
+						                    	if($count == 5)
 						                    		break;
 						                    	} ?>
 						                    	<li><a href="notices.php">See More... </a></li>	
@@ -187,9 +191,9 @@
 					</div>
 					<div class="col-lg-1"></div>
 					<div class="col-lg-4">
-						<p class="about">Provost, Sir A.F. Rahman Hall, University of Dhaka<br>
+						<a name="contact" class="about">Provost, Sir A.F. Rahman Hall, University of Dhaka<br>
 							Dhaka-1000, Bangladesh<br>Phone: 880-2-9661900 Ext /4470;/4472<br>
-							Fax:     880-2-8615583<br>Email: afrhall@du.ac.bd</p>
+							Fax:     880-2-8615583<br>Email: afrhall@du.ac.bd</a>
 					</div>
 				</div>
 			</div>

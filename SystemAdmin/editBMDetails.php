@@ -1,5 +1,5 @@
 <?php
-	include_once'EditStudentDetail.php';
+	include_once'retrieveBM.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,9 +13,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<h2 style="text-align: center;">Edit Student Details</h2>
-					<form action="EditStudentDetail.php" method="POST" id="cancel">
-						<input type="hidden" name="id" value=<?php echo $n['id'] ?>>
+					<h2 style="text-align: center;">Edit Board Member Details</h2>
+
+
+					<form action="retrieveBM.php" method="POST" id="cancel">
+
 					    <div class="row">
 					      <div class="col-25">
 					        <label for="name">Name</label>
@@ -29,8 +31,9 @@
 					        <label for="dept">Department</label>
 					      </div>
 					      <div class="col-75">
-					       	<select class="form-control" name="dept">
-					       		<option><?php echo $n['dept'];?></option>
+					       	<select class="form-control" name="department">
+
+					       		<option ><?php echo $n['department']; ?></option>
 					        	<option value="Mathematics">Mathematics</option>
 					        	<option value="Computer Science And Engineering">Computer Science And Engineering</option>
 					        	<option value="IIT">IIT</option>
@@ -47,67 +50,50 @@
 					    </div>
 					    <div class="row">
 					      <div class="col-25">
-					        <label for="roll">Class Roll</label>
+					        <label for="roll">Designation</label>
 					      </div>
 					      <div class="col-75">
-					       	<input type="text" name="roll" value="<?php echo $n['classRoll'];?>">
+					       	<select class="form-control" name="designation">
+					       		<option><?php echo $n['designation'];?></option>
+								<option value="Professor">Professor</option>
+								<option value="Associate Professor">Associate Professor</option>
+								<option value="Assistant Professor">Assistant Professor</option>
+								<option value="Lecturer">Lecturer</option>
+							</select>
+					      </div>
+					    </div>
+					    
+					    <div class="row">
+					      <div class="col-25">
+					        <label for="presentAddress">Hall Designation</label>
+					      </div>
+					      <div class="col-75">
+					        <select class="form-control" name="hall_designation">
+								<option><?php echo $n['hall_designation'];?></option>
+								<option value="Provost">Provost</option>
+								<option value="House Tutor">House Tutor</option>
+								<option value="Assistant House Tutor">Assistant House Tutor</option>
+							</select>
 					      </div>
 					    </div>
 					    <div class="row">
 					      <div class="col-25">
-					        <label for="presentAddress">Present Address</label>
+					        <label for="status">Email Address</label>
 					      </div>
 					      <div class="col-75">
-					        <input type="text" name="presentAddress" value="<?php echo $n['presentAddress'];?>">
-					      </div>
-					    </div>
-					    <div class="row">
-					      <div class="col-25">
-					        <label for="status">Status</label>
-					      </div>
-					      <div class="col-75">
-					        <select class="form-control" name="status" value="<?php echo $n['status'];?>">
-					        	<option value="Non-Resident">Non-Resident</option>
-					        	<option value="Resident">Resident</option>
-					      	</select>
-					      </div>
-					    </div>
-
-					    <div class="row">
-					      <div class="col-25">
-					        <label for="status">Room No</label>
-					      </div>
-					      <div class="col-75">
-					        <input type="text" name="presentAddress" value="<?php echo $n['room_no'];?>">
-					      </div>
-					    </div>
-
-					    <div class="row">
-					      <div class="col-25">
-					        <label for="status">Local Guardian Name</label>
-					      </div>
-					      <div class="col-75">
-					        <input type="text" name="presentAddress" value="<?php echo $n['l_name'];?>">
-					      </div>
-					    </div>
-
-					    <div class="row">
-					      <div class="col-25">
-					        <label for="status">Local guardian Contact No</label>
-					      </div>
-					      <div class="col-75">
-					        <input type="text" name="presentAddress" value="<?php echo $n['l_contactNumber'];?>">
+					        <input type="text" name="email" value="<?php echo $n['email'];?>">
 					      </div>
 					    </div>
 
 					   	<div class="row">
 					      	<?php if ($update == true): ?>
-								<button type="submit" name="update">Update</button>
+								<button type="submit" name="update">update</button>
 							<?php else: ?>
 								<button class="btn" type="submit" name="save" >Save</button> 
 							<?php endif ?>
 							<button type="button" class="cancelbtn" onclick="myFunction()">Cancel</button>
 					    </div>
+
 		  			</form>	
 				</div>
 			</div>

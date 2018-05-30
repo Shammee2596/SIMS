@@ -38,6 +38,9 @@
 						<th>Permanent Address</th>
 						<th>Blood Group</th>
 						<th onclick="sortTable(4)" style="cursor: pointer;">Status</th>
+						<th onclick="sortTable(5)" style="cursor: pointer;">Room No.</th>
+						<th>Local Guardian Name</th>
+						<th>Local Guardian Number</th>
 						<th colspan="2">Action</th>
 					</tr>								
 				</thead>
@@ -56,12 +59,15 @@
 								<td><?php echo $row['permanentAddress']; ?></td>
 								<td><?php echo $row['bloodGroup']; ?></td>
 								<td><?php echo $row['status']; ?></td>
+								<td><?php echo $row['room_no']; ?></td>
+								<td><?php echo $row['l_name']; ?></td>
+								<td><?php echo $row['l_contactNumber']; ?></td>
 								<td>
 									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
 									<form  action="deleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
-										<button onclick="return myFunction()">Delete</button>
+										<button onclick="return myFunction()" class="del_btn">Delete</button>
 									
 									</form>
 								</td>

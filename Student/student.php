@@ -87,11 +87,11 @@
 									<td>:</td>
 									<td>&nbsp;<?php echo $row['dept'];?></td>
 								</tr>
-								<tr>
+								<!-- <tr>
 									<td>Subject</td>
 									<td>:</td>
 									<td>&nbsp;</td>
-								</tr>
+								</tr> -->
 								<tr>
 									<td>Class Roll</td>
 									<td>:</td>
@@ -103,6 +103,11 @@
 									<td>&nbsp;<?php echo $row['status'];?></td>
 								</tr>
 								<tr>
+									<td>Room No</td>
+									<td>:</td>
+									<td>&nbsp;<?php echo $row['room_no'];?></td>
+								</tr>
+								<tr>
 									<td>Present Address</td>
 									<td>:</td>
 									<td>&nbsp;<?php echo $row['presentAddress'];?></td>
@@ -111,6 +116,11 @@
 									<td>Permanent Address:</td>
 									<td>:</td>
 									<td>&nbsp;<?php echo $row['permanentAddress'];?></td>
+								</tr>
+								<tr>
+									<td>Local Guardian Name</td>
+									<td>:</td>
+									<td>&nbsp;<?php echo $row['l_name'];?></td>
 								</tr>
 								<tr>
 									<td>Local Guardian Contact No</td>

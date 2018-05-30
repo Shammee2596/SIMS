@@ -1,7 +1,7 @@
 <?php
 	include_once '../Authentication/dbh.db.php';
 
-	$sql = "SELECT * FROM studentfullinformation";
+	$sql = "SELECT * FROM board_member_information";
 	$result = mysqli_query($conn, $sql);
 	$resultCheck = mysqli_num_rows($result);	
 ?>
@@ -11,7 +11,7 @@
 
 		<div class="col-lg-12"> 
 			<div>
-				<div class="col-lg-8"><h2> Student Information </h2></div>
+				<div class="col-lg-8"><h2> Board Member Information </h2></div>
 				<div class="col-lg-4">
 					<form class="navbar-form navbar-left">
 					    <div class="input-group">
@@ -28,18 +28,12 @@
 			<table class="table table-striped" id="myTable1" style="background-color: rgba(9, 138, 150,0.7);">
 				<thead>
 					<tr>
-						<th onclick="sortTable(0)" style="cursor: pointer;">Reg No.</th>
-						<th onclick="sortTable(1)" style="cursor: pointer;">Name</th>
-						<th onclick="sortTable(2)" style="cursor: pointer;">Session</th>
-						<th onclick="sortTable(3)" style="cursor: pointer;">Department</th>
-						<th>Roll</th>
-						<th>Present Address</th>
-						<th>Permanent Address</th>
-						<th>Blood Group</th>
-						<th onclick="sortTable(4)" style="cursor: pointer;">Status</th>
-						<th onclick="sortTable(5)" style="cursor: pointer;">Room No.</th>
-						<th>Local Guardian Name</th>
-						<th>Local Guardian Number</th>
+						<th onclick="sortTable(0)" style="cursor: pointer;">Name</th>
+						<th onclick="sortTable(1)" style="cursor: pointer;">Hall Designation</th>
+						<th onclick="sortTable(2)" style="cursor: pointer;">Department</th>
+						<th onclick="sortTable(3)" style="cursor: pointer;">Designation</th>
+						<th>email</th>
+						
 						<th colspan="2">Action</th>
 					</tr>								
 				</thead>
@@ -49,23 +43,16 @@
 					while ($row=mysqli_fetch_assoc($result)) {?>
 						<tbody  id="myTable">
 							<tr>
-								<td><?php echo $row['regNo']; ?></td>
 								<td><?php echo $row['name'];?></td>
-								<td><?php echo $row['session'];?></td>
-								<td><?php echo $row['dept']; ?></td>
-								<td><?php echo $row['classRoll']; ?></td>
-								<td><?php echo $row['presentAddress'];?></td>
-								<td><?php echo $row['permanentAddress']; ?></td>
-								<td><?php echo $row['bloodGroup']; ?></td>
-								<td><?php echo $row['status']; ?></td>
-								<td><?php echo $row['room_no']; ?></td>
-								<td><?php echo $row['l_name']; ?></td>
-								<td><?php echo $row['l_contactNumber']; ?></td>
+								<td><?php echo $row['hall_designation'];?></td>
+								<td><?php echo $row['department']; ?></td>
+								<td><?php echo $row['designation']; ?></td>
+								<td><?php echo $row['email'];?></td>
 								<td>
-									<a href='editStudentDetails.php?edit=<?php echo $row['id']; ?>' class='edit_btn'>Edit</a>
+									<a href='editBMDetails.php?edit=<?php echo $row['email']; ?>' class='edit_btn'>Edit</a>
 								</td>
 								<td>
-									<form  action="deleteStudent.php?delete=<?php echo $row['id']; ?>" method="POST">
+									<form  action="deleteBM.php?delete=<?php echo $row['email']; ?>" method="POST">
 										<button onclick="return myFunction()" class="del_btn">Delete</button>
 									
 									</form>

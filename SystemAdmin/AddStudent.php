@@ -108,15 +108,8 @@
 					  			</div>
 							</div>
 						</div>
-						<div class="row">
-					 		<div class="col-md-12">
-                                <input type="submit" class="btn btn-success btn-send" name="submit" value="Add Student">
-                            </div>
-					 	</div>   
-					</form> 
-					<form action="storeInformation.php" method="POST"> 
-					  	<div class="localGuardian">
-					  		<h1><u>Applicable For Resident Student</u></h1>
+						<div class="localGuardian">
+					  		<h1>Applicable For Resident Student</h1>
 					  		<div class="row">
 					  			<div class="col-md-6">
 					  				<div class="form-group">
@@ -147,12 +140,21 @@
 					  			</div>
 					  		</div>
 					 	</div>  
+
+						<div class="row">
+					 		<div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" name="submit" value="Add Student">
+                            </div>
+					 	</div>   
+					</form> 
+					<!-- <form action="storeInformation.php" method="POST"> 
+					  	
 					 	<div class="row">
 					 		<div class="col-md-12">
                                 <input type="submit" class="btn btn-success btn-send" name="submit1" value="Add Student">
                             </div>
 					 	</div>  
-					</form> 	  	
+					</form> --> 	  	
 				</div>
 			</div>
 		</div>

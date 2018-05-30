@@ -39,10 +39,10 @@
 		$sql1 = "INSERT INTO user(username, password,email,user_type) VALUES ('$userName','$hashPwd','$email','$userType')";
 		mysqli_query($conn,$sql1);
 		$sql = "INSERT INTO board_member_information(email, name, designation, department, hall_designation,username)
-		VALUES( '$email','$name', '$designation', '$dept', '$hallDesignation',(SELECT username FROM user WHERE username = '$userName'))";
+		VALUES( '$email','$name', '$designation', '$dept', '$hallDesignation',(SELECT username FROM user WHERE email = '$email'))";
 		$query = mysqli_query($conn,$sql);
 		if(!$query){
-			$sql = "DELETE FROM user WHERE username='$userName';";
+			$sql = "DELETE FROM user WHERE email='$email';";
 			mysqli_query($conn,$sql);
 		}
 		include_once 'mailBM.php';
