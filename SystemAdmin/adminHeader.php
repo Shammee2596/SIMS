@@ -1,7 +1,6 @@
 <?php
   			session_start();
   			if(!isset($_SESSION["u_id"])) {
-  				//echo "not ok";
   				header("Location: ../index.php? login=login denied as system admin");
   			} 
 ?>
@@ -36,7 +35,7 @@
  							<div class="option">
 								<div class="col-lg-1">
 									<a href="../index.php">
-   							 			<span class="glyphicon glyphicon-home" >Home</span>
+   							 			<span class="glyphicon glyphicon-home" style="color: white">Home</span>
    							 		</a> 
 								</div>
 							</div>
